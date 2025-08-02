@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -313,73 +314,134 @@
 
     <section id="competition" class="competition">
       <div class="container">
-        <h2 class="section-title">Конкурентний ландшафт та наше позиціонування</h2>
-        <p class="competition__subtitle">Аналіз цін конкурентів у Берліні:</p>
+        <h2 class="section-title">Конкурентнція та позиціонування</h2>
+        
+        <div class="chart-container">
+          <canvas id="priceComparisonChart"></canvas>
+        </div>
+        
         <div class="competition__grid">
-          <div class="competitor">
-            <h3 class="competitor__name">Shurgard (преміум-сегмент):</h3>
+          <div class="competitor competitor--shurgard">
+            <div class="competitor__header">
+              <h3 class="competitor__name">
+                <i class="fas fa-warehouse"></i> Shurgard
+              </h3>
+              <span class="competitor__segment">Преміум</span>
+            </div>
             <div class="competitor__prices">
               <div class="price-item">
-                <span class="size">Малі бокси (1-3 м²):</span>
-                <span class="price">60-78 €/м² на місяць</span>
+                <span class="size">Малі бокси (1-3 м²)</span>
+                <span class="price">60-78 €/м²</span>
               </div>
               <div class="price-item">
                 <span class="size">Середні бокси (3-5 м²)</span>
-                <span class="price">50-65 €/м² на місяць</span>
+                <span class="price">50-65 €/м²</span>
               </div>
               <div class="price-item">
-                <span class="size">Великі бокси (5-10 м²):</span>
-                <span class="price">40-50 €/м² на місяць</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="competitor">
-            <h3 class="competitor__name">MyPlace SelfStorage</h3>
-            <div class="competitor__prices">
-              <div class="price-item">
-                <span class="size">Малі бокси (1-2 м²):</span>
-                <span class="price">49-58 €/м² на місяць</span>
-              </div>
-              <div class="price-item">
-                <span class="size">Середні бокси (2-3 м²):</span>
-                <span class="price">45-52 €/м² на місяць</span>
+                <span class="size">Великі бокси (5-10 м²)</span>
+                <span class="price">40-50 €/м²</span>
               </div>
             </div>
           </div>
           
-          <div class="competitor">
-            <h3 class="competitor__name">XXLAGER</h3>
+          <div class="competitor competitor--myplace">
+            <div class="competitor__header">
+              <h3 class="competitor__name">
+                <i class="fas fa-warehouse"></i> MyPlace
+              </h3>
+              <span class="competitor__segment">Середній</span>
+            </div>
             <div class="competitor__prices">
               <div class="price-item">
-                <span class="size">Малі бокси (1-3 м²):</span>
-                <span class="price">33 €/м² на місяць</span>
+                <span class="size">Малі бокси (1-2 м²)</span>
+                <span class="price">49-58 €/м²</span>
               </div>
               <div class="price-item">
-                <span class="size">Середні бокси (3-5 м²): </span>
-                <span class="price">31 €/м² на місяць</span>
+                <span class="size">Середні бокси (2-3 м²)</span>
+                <span class="price">45-52 €/м²</span>
               </div>
               <div class="price-item">
-                <span class="size">Великі бокси (5-8 м²):</span>
-                <span class="price">29 €/м² на місяць</span>
+                <span class="size">Великі бокси (5-8 м²)</span>
+                <span class="price">37-42 €/м²</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="competitor competitor--xxlager">
+            <div class="competitor__header">
+              <h3 class="competitor__name">
+                <i class="fas fa-warehouse"></i> XXLAGER
+              </h3>
+              <span class="competitor__segment">Бюджетний</span>
+            </div>
+            <div class="competitor__prices">
+              <div class="price-item">
+                <span class="size">Малі бокси (1-3 м²)</span>
+                <span class="price">33 €/м²</span>
+              </div>
+              <div class="price-item">
+                <span class="size">Середні бокси (3-5 м²)</span>
+                <span class="price">31 €/м²</span>
+              </div>
+              <div class="price-item">
+                <span class="size">Великі бокси (5-8 м²)</span>
+                <span class="price">29 €/м²</span>
               </div>
             </div>
           </div>
           
           <div class="competitor competitor--our">
-            <h3 class="competitor__name">Наші ціни storebox</h3>
+            <div class="competitor__header">
+              <h3 class="competitor__name">
+                <i class="fas fa-warehouse"></i> storebox
+              </h3>
+              <span class="competitor__segment">Найкраща ціна</span>
+            </div>
             <div class="competitor__prices">
               <div class="price-item price-item--best">
-                <span class="size">Малі бокси (1-3 м²):</span>
-                <span class="price">29,99 €/м² на місяць</span>
+                <span class="size">Малі бокси (1-3 м²)</span>
+                <span class="price">30 €/м²</span>
               </div>
               <div class="price-item price-item--best">
-                <span class="size">Середні бокси (3-5 м²):</span>
-                <span class="price">27,99 €/м² на місяць</span>
+                <span class="size">Середні бокси (3-5 м²)</span>
+                <span class="price">28 €/м²</span>
               </div>
               <div class="price-item price-item--best">
-                <span class="size">Великі бокси (5-9 м²):</span>
-                <span class="price">25,99 €/м² на місяць</span>
+                <span class="size">Великі бокси (5-9 м²)</span>
+                <span class="price">26 €/м²</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="advantage-box">
+          <h3 class="advantage-title">
+            <i class="fas fa-star"></i>
+            Наші конкурентні переваги
+          </h3>
+          <div class="advantage-grid">
+            <div class="advantage-item">
+              <div class="advantage-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <div class="advantage-text">
+                <span class="highlight">Найнижчі ціни</span> (-20%)
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <div class="advantage-text">
+                Найкраще <span class="highlight">ціна/якість</span>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <div class="advantage-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="advantage-text">
+                <span class="highlight">Швидка експансія</span>
               </div>
             </div>
           </div>
@@ -1303,6 +1365,110 @@
                 },
                 grid: {
                   display: false
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Price Comparison Chart
+      const priceChartContainer = document.getElementById('priceComparisonChart');
+      if (priceChartContainer) {
+        const priceCtx = priceChartContainer.getContext('2d');
+        const priceComparisonChart = new Chart(priceCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Малі бокси', 'Середні бокси', 'Великі бокси'],
+            datasets: [
+              {
+                label: 'Shurgard',
+                data: [69, 57.5, 45],
+                backgroundColor: 'rgba(25, 118, 210, 0.7)',
+                borderColor: 'rgba(25, 118, 210, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'MyPlace',
+                data: [53.5, 48.5, 39.5],
+                backgroundColor: 'rgba(156, 39, 176, 0.7)',
+                borderColor: 'rgba(156, 39, 176, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'XXLAGER',
+                data: [33, 31, 29],
+                backgroundColor: 'rgba(255, 152, 0, 0.7)',
+                borderColor: 'rgba(255, 152, 0, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'storebox',
+                data: [29.99, 27.99, 25.99],
+                backgroundColor: 'rgba(76, 175, 80, 0.9)',
+                borderColor: 'rgba(76, 175, 80, 1)',
+                borderWidth: 2
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: '€/м² на місяць',
+                  font: {
+                    size: 14,
+                    weight: 'bold',
+                    family: 'Ubuntu'
+                  },
+                  color: '#B8C5C7'
+                },
+                max: 80,
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu'
+                  }
+                },
+                grid: {
+                  color: 'rgba(255, 255, 255, 0.1)'
+                }
+              },
+              x: {
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu',
+                    size: 11
+                  }
+                },
+                grid: {
+                  display: false
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {
+                  boxWidth: 15,
+                  padding: 15,
+                  font: {
+                    size: 12,
+                    family: 'Ubuntu'
+                  },
+                  color: '#B8C5C7'
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.dataset.label + ': ' + context.parsed.y + ' €/м²';
+                  }
                 }
               }
             }

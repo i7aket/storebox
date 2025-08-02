@@ -910,10 +910,20 @@ main .hero {
     text-align: center;
     margin-bottom: 40px;
 }
+.chart-container {
+    height: 400px;
+    margin-bottom: 40px;
+    background: var(--bg-white);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px var(--shadow-white);
+}
+
 .competition__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
 }
 .competitor {
     background: var(--bg-white-light);
@@ -926,20 +936,76 @@ main .hero {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px var(--shadow-white);
 }
+.competitor--shurgard {
+    border-top: 5px solid #1976d2;
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, var(--bg-white) 100%);
+}
+.competitor--myplace {
+    border-top: 5px solid #9c27b0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, var(--bg-white) 100%);
+}
+.competitor--xxlager {
+    border-top: 5px solid #ff9800;
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, var(--bg-white) 100%);
+}
 .competitor--our {
     border: 2px solid var(--primary-green);
     background: var(--bg-green-light);
+    border-top: 5px solid var(--primary-green);
 }
 .competitor--our:hover {
     box-shadow: 0 10px 30px var(--shadow-green-strong);
 }
+.competitor__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
 .competitor__name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.competitor__name i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+.competitor--shurgard .competitor__name {
+    color: #1976d2;
+}
+.competitor--myplace .competitor__name {
+    color: #9c27b0;
+}
+.competitor--xxlager .competitor__name {
+    color: #ff9800;
 }
 .competitor--our .competitor__name {
+    color: var(--primary-green);
+}
+.competitor__segment {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.competitor--shurgard .competitor__segment {
+    background-color: rgba(25, 118, 210, 0.1);
+    color: #1976d2;
+}
+.competitor--myplace .competitor__segment {
+    background-color: rgba(156, 39, 176, 0.1);
+    color: #9c27b0;
+}
+.competitor--xxlager .competitor__segment {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+}
+.competitor--our .competitor__segment {
+    background-color: rgba(76, 175, 80, 0.1);
     color: var(--primary-green);
 }
 .competitor__prices {
@@ -962,6 +1028,62 @@ main .hero {
 .size {
     font-size: 0.8rem;
     color: var(--text-muted);
+}
+
+.advantage-box {
+    background: var(--bg-green-light);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 5px solid var(--primary-green);
+    box-shadow: 0 10px 30px var(--shadow-green);
+}
+.advantage-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.advantage-title i {
+    margin-right: 10px;
+}
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.advantage-item {
+    display: flex;
+    align-items: center;
+    background: var(--bg-white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.advantage-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+.advantage-icon i {
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+.advantage-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.highlight {
+    color: var(--primary-green);
+    font-weight: 700;
 }
 .price-item--best .size,
 .price-item--best .price {
@@ -2261,6 +2383,13 @@ main .hero {
     
     .competition__grid {
         grid-template-columns: 1fr;
+    }
+    .advantage-grid {
+        grid-template-columns: 1fr;
+    }
+    .chart-container {
+        height: 300px;
+        padding: 15px;
     }
     /* Market Imbalance Mobile Styles */
     .market-comparison {
