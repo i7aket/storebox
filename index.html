@@ -568,86 +568,165 @@
       <div class="container">
         <h2 class="section-title">Фінансова модель першої локації</h2>
         <div class="financial__overview">
-          <div class="financial__params">
-            <h3>Базові параметри (1,000 м²):</h3>
+          <div class="financial__two-column">
+            <div class="financial__left-column">
+              <div class="financial__card">
+                <div class="financial__card-title">
+                  <i class="fas fa-ruler-combined"></i>
+                  Базові параметри
+                </div>
+                <div class="financial__parameter-grid">
+                  <div class="parameter-item">
+                    <div class="parameter-label">Орендована площа</div>
+                    <div class="parameter-value">1,000<span class="parameter-unit">м²</span></div>
+                  </div>
+                  <div class="parameter-item">
+                    <div class="parameter-label">Після конверсії</div>
+                    <div class="parameter-value">800<span class="parameter-unit">м²</span></div>
+                  </div>
+                  <div class="parameter-item">
+                    <div class="parameter-label">Середньозважена ціна</div>
+                    <div class="parameter-value">€28.39<span class="parameter-unit">/м²</span></div>
+                  </div>
+                  <div class="parameter-item">
+                    <div class="parameter-label">Точка беззбитковості</div>
+                    <div class="parameter-value">50.8<span class="parameter-unit">%</span></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="financial__card">
+                <div class="financial__card-title">
+                  <i class="fas fa-coins"></i>
+                  Структура доходів
+                </div>
+                <div class="financial__price-structure">
+                  <div class="financial__price-item">
+                    <div class="box-type">
+                      <div class="box-size">Малі бокси</div>
+                      <div class="box-percentage">40%</div>
+                    </div>
+                    <div class="price-value">€29.99/м²</div>
+                  </div>
+                  <div class="financial__price-item">
+                    <div class="box-type">
+                      <div class="box-size">Середні бокси</div>
+                      <div class="box-percentage">40%</div>
+                    </div>
+                    <div class="price-value">€27.99/м²</div>
+                  </div>
+                  <div class="financial__price-item">
+                    <div class="box-type">
+                      <div class="box-size">Великі бокси</div>
+                      <div class="box-percentage">20%</div>
+                    </div>
+                    <div class="price-value">€25.99/м²</div>
+                  </div>
+                  <div class="financial__total-row">
+                    <div class="total-label">Потенційний дохід</div>
+                    <div class="total-value">€22,712/міс</div>
+                  </div>
+                  <div class="financial__total-row">
+                    <div class="total-label">Додаткові послуги</div>
+                    <div class="total-value">€2,000/міс</div>
+                  </div>
+                  <div class="financial__total-row">
+                    <div class="total-label">Разом доходи</div>
+                    <div class="total-value">€24,712/міс</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="financial__card">
+                <div class="financial__card-title">
+                  <i class="fas fa-chart-pie"></i>
+                  Структура витрат
+                </div>
+                <div class="financial__price-structure">
+                  <div class="financial__price-item">
+                    <div class="box-type">
+                      <div class="box-size">Оренда складу</div>
+                    </div>
+                    <div class="price-value">€8,000/міс</div>
+                  </div>
+                  <div class="financial__price-item">
+                    <div class="box-type">
+                      <div class="box-size">Операційні витрати</div>
+                    </div>
+                    <div class="price-value">€4,550/міс</div>
+                  </div>
+                  <div class="financial__total-row">
+                    <div class="total-label">Разом витрати</div>
+                    <div class="total-value">€12,550/міс</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             
-            <h4>Доходи:</h4>
-            <div class="param">
-              <span class="param__label">Орендована площа:</span>
-              <span class="param__value">800 м² (після конверсії)</span>
-            </div>
-          </div>
-          
-          <div class="financial__structure">
-            <h4>Цінова структура:</h4>
-            <div class="price-structure">
-              <div class="price-tier">
-                <div class="price-tier__size">Малі бокси (1-3 м²):</div>
-                <div class="price-tier__price">29,99 €/м²</div>
-                <div class="price-tier__share">(40% площі)</div>
+            <div class="financial__right-column">
+              <div class="financial__card">
+                <div class="financial__card-title">
+                  <i class="fas fa-chart-bar"></i>
+                  Фінансові сценарії
+                </div>
+                <div class="financial__chart-container">
+                  <canvas id="financialChart"></canvas>
+                </div>
               </div>
-              <div class="price-tier">
-                <div class="price-tier__size">Середні бокси (3-5 м²):</div>
-                <div class="price-tier__price">27,99 €/м²</div>
-                <div class="price-tier__share">(40% площі)</div>
+              
+              <div class="financial__scenarios-container">
+                <div class="scenario-card scenario-card--conservative">
+                  <div class="scenario-title">Беззбитковість</div>
+                  <div class="scenario-value">50%</div>
+                  <div class="scenario-desc">Точка брейківен<br>(50.8% завантаження)</div>
+                </div>
+                
+                <div class="scenario-card scenario-card--base">
+                  <div class="scenario-title">Базовий</div>
+                  <div class="scenario-value">€56,981</div>
+                  <div class="scenario-desc">Річний прибуток<br>(<span class="highlight">€8,455/міс</span> при 70% завантаження)</div>
+                </div>
+                
+                <div class="scenario-card scenario-card--target">
+                  <div class="scenario-title">Плановий</div>
+                  <div class="scenario-value">€101,460</div>
+                  <div class="scenario-desc">Річний прибуток<br>(85% завантаження)</div>
+                </div>
               </div>
-              <div class="price-tier">
-                <div class="price-tier__size">Великі бокси (5-9 м²):</div>
-                <div class="price-tier__price">25,99 €/м²</div>
-                <div class="price-tier__share">(20% площі)</div>
-              </div>
-            </div>
-            
-            <div class="financial__calculations">
-              <div class="param">
-                <span class="param__label">Середньозважена ціна:</span>
-                <span class="param__value">€28,39/м²/місяць</span>
-              </div>
-              <div class="param">
-                <span class="param__label">Потенційний дохід від оренди:</span>
-                <span class="param__value"><strong>€22 712/місяць</strong> (800 × €28,39)</span>
-              </div>
-              <div class="param">
-                <span class="param__label">Дохід від додаткових послуг:</span>
-                <span class="param__value">€2 000/місяць</span>
-              </div>
-              <div class="param param--highlight">
-                <span class="param__label">Загальний потенційний дохід:</span>
-                <span class="param__value"><strong>€24 712/місяць</strong></span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="financial__expenses">
-            <h3>Витрати:</h3>
-            <div class="param">
-              <span class="param__label">Оренда складу:</span>
-              <span class="param__value">€8 000/місяць</span>
-            </div>
-            <div class="param">
-              <span class="param__label">Операційні витрати:</span>
-              <span class="param__value">€4 550/місяць</span>
-            </div>
-            <div class="param param--highlight">
-              <span class="param__label">Разом витрати:</span>
-              <span class="param__value"><strong>€12 550/місяць</strong></span>
-            </div>
-          </div>
-          
-          <div class="financial__projections">
-            <h3>Фінансові сценарії:</h3>
-            <div class="projections__grid">
-              <div class="projection">
-                <div class="projection__period">Песимістичний (50% завантаження):</div>
-                <div class="projection__value">€12 550 ÷ €24 712 = 50.8%<br><strong>точка беззбитковості</strong></div>
-              </div>
-              <div class="projection">
-                <div class="projection__period">Реалістичний (70% завантаження):</div>
-                <div class="projection__value">€56 981 річний прибуток<br>(<strong>€8 455/місяць</strong>)</div>
-              </div>
-              <div class="projection">
-                <div class="projection__period">Оптимістичний (85% завантаження):</div>
-                <div class="projection__value">€101 460 річний прибуток</div>
+              
+              <div class="financial__metrics-container">
+                <div class="key-metric">
+                  <div class="key-metric-icon">
+                    <i class="fas fa-percentage"></i>
+                  </div>
+                  <div class="key-metric-content">
+                    <div class="key-metric-label">Рентабельність при базовому сценарії</div>
+                    <div class="key-metric-value">34.2%</div>
+                    <div class="key-metric-desc">Маржинальність операційного прибутку</div>
+                  </div>
+                </div>
+                
+                <div class="key-metric">
+                  <div class="key-metric-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="key-metric-content">
+                    <div class="key-metric-label">Рентабельність при плановому сценарії</div>
+                    <div class="key-metric-value">41.0%</div>
+                    <div class="key-metric-desc">Маржинальність операційного прибутку</div>
+                  </div>
+                </div>
+                
+                <div class="key-metric">
+                  <div class="key-metric-icon">
+                    <i class="fas fa-chart-area"></i>
+                  </div>
+                  <div class="key-metric-content">
+                    <div class="key-metric-label">Середня завантаженість складів у Берліні</div>
+                    <div class="key-metric-value">85%+</div>
+                    <div class="key-metric-desc">Високий попит підтверджує ринкові можливості</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1468,6 +1547,103 @@
                 callbacks: {
                   label: function(context) {
                     return context.dataset.label + ': ' + context.parsed.y + ' €/м²';
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Financial Chart
+      const financialChartContainer = document.getElementById('financialChart');
+      if (financialChartContainer) {
+        const financialCtx = financialChartContainer.getContext('2d');
+        const financialChart = new Chart(financialCtx, {
+          type: 'bar',
+          data: {
+            labels: ['50% завантаження', '70% завантаження', '85% завантаження'],
+            datasets: [
+              {
+                label: 'Дохід',
+                data: [12356, 17298, 21005],
+                backgroundColor: 'rgba(76, 175, 80, 0.7)',
+                borderColor: 'rgba(76, 175, 80, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'Витрати',
+                data: [12550, 12550, 12550],
+                backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                borderColor: 'rgba(239, 68, 68, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'Прибуток',
+                data: [-194, 4748, 8455],
+                backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                borderColor: 'rgba(59, 130, 246, 1)',
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: '€/місяць',
+                  font: {
+                    size: 14,
+                    weight: 'bold',
+                    family: 'Ubuntu'
+                  },
+                  color: '#B8C5C7'
+                },
+                max: 25000,
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu'
+                  }
+                },
+                grid: {
+                  color: 'rgba(255, 255, 255, 0.1)'
+                }
+              },
+              x: {
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu',
+                    size: 11
+                  }
+                },
+                grid: {
+                  display: false
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {
+                  boxWidth: 15,
+                  padding: 15,
+                  font: {
+                    size: 12,
+                    family: 'Ubuntu'
+                  },
+                  color: '#B8C5C7'
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.dataset.label + ': €' + context.parsed.y.toLocaleString();
                   }
                 }
               }
