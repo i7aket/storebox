@@ -388,7 +388,7 @@ main .hero {
     pointer-events: none;
 }
 .market__content {
-    display: grid;
+    display: flex;
     gap: 60px;
     position: relative;
     z-index: 1;
@@ -569,13 +569,14 @@ main .hero {
     border: 1px solid var(--border-green-light);
 }
 .market__stat-number {
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     color: var(--primary-green);
     margin-right: 20px;
     min-width: 80px;
     text-align: center;
     text-shadow: 0 2px 4px var(--shadow-green-medium);
+    flex-shrink: 0;
 }
 .market__stat-desc {
     font-size: clamp(0.9rem, 2.5vw, 1rem);
@@ -583,6 +584,114 @@ main .hero {
     flex-grow: 1;
     line-height: 1.5;
 }
+
+/* New Two-Column Market Layout */
+.market__left-column {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.market__right-column {
+    width: 50%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.market__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+}
+
+.market__section-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px var(--shadow-green-medium));
+}
+
+.market__chart-container {
+    height: 300px;
+    margin-bottom: 20px;
+    background: var(--bg-white-light);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--border-green-light);
+}
+
+.market__data-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: var(--bg-white-light);
+    border-radius: 15px;
+    border: 1px solid var(--border-green-light);
+    transition: all 0.3s ease;
+}
+
+.market__data-point:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow-green-medium);
+    border-color: var(--border-green-strong);
+}
+
+.market__data-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg-green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border: 2px solid var(--border-green-semi);
+}
+
+.market__icon {
+    font-size: 24px;
+    filter: drop-shadow(0 2px 4px var(--shadow-green-medium));
+}
+
+.market__data-content {
+    flex-grow: 1;
+}
+
+.market__data-title {
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.market__data-value {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px var(--shadow-green-medium);
+}
+
+.market__data-desc {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.market__highlight-box {
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 4px 20px var(--shadow-green-light);
+    backdrop-filter: blur(10px);
+}
+
 /* Market Imbalance Section */
 .market-imbalance {
     padding: 100px 0;
@@ -2117,6 +2226,44 @@ main .hero {
     .market__driver-icon {
         font-size: 2.5rem;
         margin-bottom: 15px;
+    }
+    
+    /* New Two-Column Market Mobile Styles */
+    .market__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .market__left-column,
+    .market__right-column {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .market__chart-container {
+        height: 250px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .market__data-point {
+        padding: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .market__data-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .market__icon {
+        font-size: 20px;
+    }
+    
+    .market__highlight-box {
+        padding: 20px 15px;
+        margin: 15px 0;
     }
     
     .timeline {

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header class="header">
@@ -134,67 +135,67 @@
       <div class="container">
         <h2 class="section-title">Ринкова можливість</h2>
         <div class="market__content">
-          <div class="market__shortage">
-            <h3 class="market__subtitle">Гостра нестача складів у Німеччині</h3>
-            <div class="market__comparison">
-              <div class="market__country">
-                <span class="market__country-name">Данія</span>
-                <div class="market__bar market__bar--denmark">
-                  <span class="market__value">12.95 м²/особу</span>
-                </div>
-              </div>
-              <div class="market__country">
-                <span class="market__country-name">Бельгія, Нідерланди, Великобританія та ін.</span>
-                <div class="market__bar market__bar--europe">
-                  <span class="market__value">2.5 м²/особу</span>
-                </div>
-              </div>
-              <div class="market__country">
-                <span class="market__country-name">Німеччина</span>
-                <div class="market__bar market__bar--germany">
-                  <span class="market__value">0.47 м²/особу</span>
-                </div>
-              </div>
+          <div class="market__left-column">
+            <div class="market__section-title">
+              <span class="market__section-icon">📈</span>
+              Гостра нестача складів у Німеччині
             </div>
-            
-            <div class="market__highlight">
+            <div class="market__chart-container">
+              <canvas id="storageChart"></canvas>
+            </div>
+            <div class="market__highlight-box">
               <div class="market__highlight-title">Ринок недонасичений в 5+ разів</div>
               <div class="market__highlight-content">Німеччина має лише 0.47 м²/особу складських площ порівняно з середнім показником 2.5 м²/особу в ЄС</div>
             </div>
-            
             <div class="market__key-stat">
               <div class="market__stat-number">+5.7%</div>
               <div class="market__stat-desc">Зростання self-storage під час фінансової кризи 2008 року, що підтверджує стійкість бізнес-моделі</div>
             </div>
           </div>
           
-          <div class="market__drivers">
-            <h3 class="market__subtitle">Структурні драйвери зростання</h3>
-            <div class="market__drivers-grid">
-              <div class="market__driver">
-                <div class="market__driver-icon">🏠</div>
-                <h4>Зменшення житлової площі</h4>
-                <div class="market__driver-stat">72м² → 65м²</div>
-                <p>Середня площа житла скоротилася за останні 10 років</p>
+          <div class="market__right-column">
+            <div class="market__section-title">
+              <span class="market__section-icon">💡</span>
+              Структурні драйвери зростання
+            </div>
+            <div class="market__data-point">
+              <div class="market__data-icon">
+                <span class="market__icon">🏠</span>
               </div>
-              <div class="market__driver">
-                <div class="market__driver-icon">🚚</div>
-                <h4>Висока мобільність населення</h4>
-                <div class="market__driver-stat">17%+</div>
-                <p>Німців переїжджають щорічно, створюючи попит на тимчасове зберігання</p>
+              <div class="market__data-content">
+                <div class="market__data-title">Зменшення житлової площі</div>
+                <div class="market__data-value">72м² → 65м²</div>
+                <div class="market__data-desc">Середня площа житла скоротилася за останні 10 років</div>
               </div>
-              <div class="market__driver">
-                <div class="market__driver-icon">🛒</div>
-                <h4>Вибухове зростання онлайн-торгівлі</h4>
-                <div class="market__driver-stat">+57.8%</div>
-                <p>Зростання e-commerce в Німеччині (2017-2020)<br>
-                  Європа: частка онлайн-покупців 59% → 77% за десятиліття<br>Глобально $5.8 → $8 трлн до 2027</p>
+            </div>
+            <div class="market__data-point">
+              <div class="market__data-icon">
+                <span class="market__icon">🚚</span>
               </div>
-              <div class="market__driver">
-                <div class="market__driver-icon">💰</div>
-                <h4>Попит на малі приміщення</h4>
-                <div class="market__driver-stat">€60+/м²</div>
-                <p>Ціна на малі складські приміщення (1-3 м²) в Берліні</p>
+              <div class="market__data-content">
+                <div class="market__data-title">Висока мобільність населення</div>
+                <div class="market__data-value">17%+</div>
+                <div class="market__data-desc">Німців переїжджають щорічно, створюючи попит на тимчасове зберігання</div>
+              </div>
+            </div>
+            <div class="market__data-point">
+              <div class="market__data-icon">
+                <span class="market__icon">🛒</span>
+              </div>
+              <div class="market__data-content">
+                <div class="market__data-title">Вибухове зростання онлайн-торгівлі</div>
+                <div class="market__data-value">+57.8%</div>
+                <div class="market__data-desc">Зростання e-commerce в Німеччині (2017-2020)</div>
+              </div>
+            </div>
+            <div class="market__data-point">
+              <div class="market__data-icon">
+                <span class="market__icon">💰</span>
+              </div>
+              <div class="market__data-content">
+                <div class="market__data-title">Попит на малі приміщення</div>
+                <div class="market__data-value">€60+/м²</div>
+                <div class="market__data-desc">Ціна на малі складські приміщення (1-3 м²) в Берліні</div>
               </div>
             </div>
           </div>
@@ -1127,6 +1128,126 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chartContainer = document.getElementById('storageChart');
+      if (chartContainer) {
+        const ctx = chartContainer.getContext('2d');
+        // Кастомный плагин для отображения значений на столбиках
+        const dataLabelsPlugin = {
+          id: 'dataLabels',
+          afterDatasetsDraw: function(chart) {
+            const ctx = chart.ctx;
+            chart.data.datasets.forEach((dataset, datasetIndex) => {
+              const meta = chart.getDatasetMeta(datasetIndex);
+              meta.data.forEach((bar, index) => {
+                const data = dataset.data[index];
+                const label = data + 'м²';
+                
+                ctx.save();
+                ctx.font = 'bold 14px Ubuntu';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                // Для Дании (index 0) - внутри столбика
+                if (index === 0) {
+                  ctx.fillStyle = '#253638'; // Темный цвет для контраста с зеленым
+                  ctx.fillText(label, bar.x, bar.y + (bar.height / 2));
+                } else {
+                  // Для ЄС и Німеччина - над столбиком
+                  ctx.fillStyle = '#E1E8EA'; // Светлый цвет
+                  ctx.fillText(label, bar.x, bar.y - 10);
+                }
+                
+                ctx.restore();
+              });
+            });
+          }
+        };
+
+        const storageChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Данія', 'ЄС', 'Німеччина'],
+            datasets: [{
+              label: 'м²/особу',
+              data: [12.95, 2.5, 0.47],
+              backgroundColor: [
+                '#54FF8F',
+                '#FFB054',
+                '#FF5454'
+              ],
+              borderColor: [
+                '#54FF8F',
+                '#FFB054',
+                '#FF5454'
+              ],
+              borderWidth: 1,
+              borderRadius: 5
+            }]
+          },
+          plugins: [dataLabelsPlugin],
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.parsed.y + ' м²/особу';
+                  }
+                },
+                backgroundColor: 'rgba(37, 54, 56, 0.9)',
+                titleColor: '#54FF8F',
+                bodyColor: '#ffffff',
+                borderColor: '#54FF8F',
+                borderWidth: 1
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'м²/особу',
+                  color: '#E1E8EA',
+                  font: {
+                    size: 12,
+                    family: 'Ubuntu'
+                  }
+                },
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu'
+                  }
+                },
+                grid: {
+                  color: 'rgba(255, 255, 255, 0.1)'
+                }
+              },
+              x: {
+                ticks: {
+                  color: '#B8C5C7',
+                  font: {
+                    family: 'Ubuntu',
+                    size: 11
+                  },
+                  maxRotation: 0
+                },
+                grid: {
+                  display: false
+                }
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
