@@ -3172,3 +3172,238 @@ main .hero {
         word-break: keep-all;
     }
 }
+
+/* Investment Details Section */
+.investment__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.investment__section-title i {
+    margin-right: 12px;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.investment__container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.investment__left-column {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.investment__right-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.investment__total-display {
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-green);
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-green-light);
+}
+
+.investment__total-label {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.investment__total-amount {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary-green);
+    text-shadow: 0 2px 4px var(--shadow-green-medium);
+}
+
+.investment__chart-container {
+    flex-grow: 1;
+    min-height: 320px;
+    background: var(--bg-white-light);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px var(--shadow-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.investment__box {
+    background: var(--bg-white-light);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px var(--shadow-white);
+    transition: all 0.3s ease;
+}
+
+.investment__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.investment__box--conversion {
+    border-left: 5px solid var(--primary-green);
+}
+
+.investment__box--reserves {
+    border-left: 5px solid #FF9A42;
+}
+
+.investment__box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.investment__box-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.investment__box--conversion .investment__box-title {
+    color: var(--primary-green);
+}
+
+.investment__box--reserves .investment__box-title {
+    color: #FF9A42;
+}
+
+.investment__box-title i {
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+.investment__box-amount {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 700;
+}
+
+.investment__box--conversion .investment__box-amount {
+    color: var(--primary-green);
+}
+
+.investment__box--reserves .investment__box-amount {
+    color: #FF9A42;
+}
+
+.investment__expense-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.investment__expense-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.investment__expense-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.investment__box--conversion .investment__expense-icon {
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+    border: 2px solid var(--primary-green-light);
+}
+
+.investment__box--conversion .investment__expense-icon i {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+}
+
+.investment__box--reserves .investment__expense-icon {
+    background: linear-gradient(135deg, rgba(255, 154, 66, 0.15) 0%, rgba(255, 176, 84, 0.1) 100%);
+    border: 2px solid rgba(255, 154, 66, 0.3);
+}
+
+.investment__box--reserves .investment__expense-icon i {
+    color: #FF9A42;
+    font-size: 1.1rem;
+}
+
+.investment__expense-content {
+    flex-grow: 1;
+}
+
+.investment__expense-name {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.investment__expense-value {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    font-weight: 700;
+}
+
+.investment__box--conversion .investment__expense-value {
+    color: var(--primary-green);
+}
+
+.investment__box--reserves .investment__expense-value {
+    color: #FF9A42;
+}
+
+/* Investment Details Mobile Styles */
+@media (max-width: 768px) {
+    .investment__container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .investment__left-column,
+    .investment__right-column {
+        width: 100%;
+    }
+    
+    .investment__chart-container {
+        min-height: 280px;
+    }
+    
+    .investment__expense-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .investment__expense-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .investment__expense-icon i {
+        font-size: 1rem !important;
+    }
+}
