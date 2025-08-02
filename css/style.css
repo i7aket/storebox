@@ -697,114 +697,206 @@ main .hero {
     padding: 100px 0;
     background: var(--bg-dark);
 }
-.imbalance__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 60px;
+/* Market Comparison Structure */
+.market-comparison {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-.imbalance__card {
-    background: var(--bg-white-light);
+
+.market-column {
+    flex: 1;
     padding: 30px;
     border-radius: 20px;
     border: 2px solid transparent;
+    background: var(--bg-white-light);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
-.imbalance__card--large {
+.large-warehouses {
     border-color: var(--error);
+    border-left: 5px solid var(--error);
 }
-.imbalance__card--large:hover {
+
+.large-warehouses:hover {
     border-color: var(--error-hover);
     transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-error);
 }
-.imbalance__card--small {
+
+.small-spaces {
     border-color: var(--primary-green);
+    border-left: 5px solid var(--primary-green);
 }
-.imbalance__card--small:hover {
+
+.small-spaces:hover {
     border-color: var(--primary-green-light);
     transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-green-strong);
 }
-.imbalance__header {
+
+.column-title {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 600;
+    margin-bottom: 25px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    color: var(--text-primary);
 }
-.imbalance__header h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
+
+.column-icon {
+    margin-right: 12px;
+    font-size: 1.8rem;
+    filter: drop-shadow(0 2px 4px var(--shadow-medium));
 }
-.imbalance__status {
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.imbalance__status--negative {
-    background: var(--error-bg);
+
+.large-warehouses .column-title {
     color: var(--error);
 }
-.imbalance__status--positive {
-    background: var(--bg-green-medium);
+
+.small-spaces .column-title {
     color: var(--primary-green);
 }
-.imbalance__price {
-    margin-bottom: 15px;
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--bg-white-very-light);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
-.imbalance__price-current {
-    font-size: 1.2rem;
+
+.stat-item:hover {
+    background: var(--bg-white-medium);
+    transform: translateX(5px);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.large-warehouses .stat-icon {
+    background: var(--error-bg);
+    border: 2px solid var(--error);
+}
+
+.small-spaces .stat-icon {
+    background: var(--bg-green-medium);
+    border: 2px solid var(--primary-green);
+}
+
+.stat-emoji {
+    font-size: 20px;
+    filter: drop-shadow(0 2px 4px var(--shadow-medium));
+}
+
+.stat-content {
+    flex-grow: 1;
+}
+
+.stat-value {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
-    display: block;
     margin-bottom: 5px;
 }
-.imbalance__price-potential {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+
+.large-warehouses .stat-value {
+    color: var(--error);
 }
-.imbalance__reason {
-    color: var(--text-muted);
-    font-style: italic;
+
+.small-spaces .stat-value {
+    color: var(--primary-green);
 }
-.imbalance__explanation {
+
+.stat-desc {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Reasons Section */
+.reasons-section {
     background: var(--bg-white-light);
-    padding: 40px;
-    border-radius: 15px;
-    border-left: 4px solid var(--primary-green);
+    border-radius: 20px;
+    padding: 30px;
+    border-left: 5px solid var(--warning);
+    backdrop-filter: blur(10px);
 }
-.imbalance__explanation h3 {
-    font-size: 1.5rem;
+
+.reasons-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--primary-green);
-}
-.imbalance__mindset h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 15px;
     color: var(--warning);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
 }
-.imbalance__reasons {
-    list-style: none;
-    padding: 0;
+
+.reasons-icon {
+    margin-right: 12px;
+    font-size: 1.8rem;
+    filter: drop-shadow(0 2px 4px var(--shadow-warning));
 }
-.imbalance__reasons li {
-    padding: 10px 0;
-    padding-left: 25px;
-    position: relative;
-    color: var(--text-muted);
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
-.imbalance__reasons li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--primary-green);
+
+.reason-item {
+    padding: 25px 20px;
+    background: var(--bg-white-medium);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-white-light);
+}
+
+.reason-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-warning);
+    border-color: var(--warning);
+}
+
+.reason-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--warning-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border: 2px solid var(--warning);
+    transition: all 0.3s ease;
+}
+
+.reason-emoji {
+    font-size: 22px;
+    filter: drop-shadow(0 2px 4px var(--shadow-warning));
+}
+
+.reason-text {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.highlight {
     font-weight: 700;
+    color: var(--warning);
 }
 /* Competition Section */
 .competition {
@@ -2170,8 +2262,47 @@ main .hero {
     .competition__grid {
         grid-template-columns: 1fr;
     }
-    .imbalance__grid {
+    /* Market Imbalance Mobile Styles */
+    .market-comparison {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .market-column {
+        padding: 20px;
+    }
+    
+    .stat-item {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .stat-emoji {
+        font-size: 18px;
+    }
+    
+    .reasons-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .reason-item {
+        padding: 20px 15px;
+    }
+    
+    .reason-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .reason-emoji {
+        font-size: 20px;
     }
     
     /* Market Opportunity Mobile Styles */
