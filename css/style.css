@@ -2541,64 +2541,353 @@ main .hero {
         height: 55px;
     }
 }
+/* Risk Analysis Section - Enhanced with Color Themes */
 .risks {
     padding: 100px 0;
     background: var(--bg-darker);
 }
-.risks__overview h3 {
-    font-size: 1.8rem;
+
+.risks__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 600;
+    color: var(--text-primary);
     margin-bottom: 40px;
-    color: var(--primary-green);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
-.risks__grid {
+
+.risks__section-title i {
+    color: #4fc3f7;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.risks__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 30px;
+    margin-top: 40px;
 }
-.risk {
+
+.risk__card {
     background: var(--bg-white-light);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid var(--border-green-medium);
-    transition: all 0.3s ease;
-}
-.risk:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px var(--shadow-green-light);
-    border-color: var(--border-green-hover);
-}
-.risk__number {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--error);
-}
-.risk__mitigation ul {
-    list-style: none;
+    border-radius: 20px;
     padding: 0;
-}
-.risk__mitigation li {
-    padding: 10px 0;
-    padding-left: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     position: relative;
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: color 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-green-light);
 }
-.risk__mitigation li::before {
-    content: '•';
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    color: var(--primary-green);
-    font-size: 1.2rem;
+
+.risk__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.risk__header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.risk__icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+.risk__title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+.risk__content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.risk__mitigation-title {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.risk__strategy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.risk__strategy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.risk__strategy-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+
+.risk__strategy-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.risk__highlight {
     font-weight: 700;
 }
-.risk__mitigation li:hover {
-    color: var(--text-primary);
+
+/* Loading Risk - Red Theme */
+.risk__card--loading {
+}
+
+.risk__card--loading .risk__header {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.risk__card--loading .risk__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.risk__card--loading .risk__mitigation-title i {
+    color: #f44336;
+}
+
+.risk__card--loading .risk__strategy-icon {
+    color: #f44336;
+}
+
+.risk__card--loading .risk__highlight {
+    color: #f44336;
+}
+
+/* Competition Risk - Orange Theme */
+.risk__card--competition {
+}
+
+.risk__card--competition .risk__header {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.risk__card--competition .risk__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.risk__card--competition .risk__mitigation-title i {
+    color: #ff9800;
+}
+
+.risk__card--competition .risk__strategy-icon {
+    color: #ff9800;
+}
+
+.risk__card--competition .risk__highlight {
+    color: #ff9800;
+}
+
+/* Economic Risk - Blue Theme */
+.risk__card--economic {
+}
+
+.risk__card--economic .risk__header {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
+.risk__card--economic .risk__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.risk__card--economic .risk__mitigation-title i {
+    color: #2196f3;
+}
+
+.risk__card--economic .risk__strategy-icon {
+    color: #2196f3;
+}
+
+.risk__card--economic .risk__highlight {
+    color: #2196f3;
+}
+
+/* Development Risk - Purple Theme */
+.risk__card--development {
+}
+
+.risk__card--development .risk__header {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+}
+
+.risk__card--development .risk__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.risk__card--development .risk__mitigation-title i {
+    color: #9c27b0;
+}
+
+.risk__card--development .risk__strategy-icon {
+    color: #9c27b0;
+}
+
+.risk__card--development .risk__highlight {
+    color: #9c27b0;
+}
+
+/* Summary Box */
+.risks__summary-box {
+    background: linear-gradient(135deg, rgba(65, 147, 229, 0.1) 0%, rgba(65, 147, 229, 0.05) 100%);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    border-left: 5px solid #0288d1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.risks__summary-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.risks__summary-icon i {
+    color: #0288d1;
+    font-size: 2rem;
+}
+
+.risks__summary-content {
+    flex-grow: 1;
+}
+
+.risks__summary-title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 600;
+    color: #0288d1;
+    margin-bottom: 10px;
+}
+
+.risks__summary-desc {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Risk Analysis Responsive Design */
+@media (max-width: 768px) {
+    .risks__container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .risk__header {
+        padding: 20px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .risk__icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+    }
+    
+    .risk__title {
+        margin: 0;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+    
+    .risk__content {
+        padding: 25px 20px;
+    }
+    
+    .risk__strategy-list {
+        gap: 15px;
+    }
+    
+    .risk__strategy-item {
+        gap: 12px;
+    }
+    
+    .risk__strategy-text {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+    
+    .risks__summary-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .risks__summary-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .risks {
+        padding: 80px 0;
+    }
+    
+    .risks__section-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .risk__header {
+        padding: 18px 20px;
+    }
+    
+    .risk__content {
+        padding: 20px 15px;
+    }
+    
+    .risks__summary-box {
+        padding: 20px 15px;
+    }
+    
+    .risks__summary-icon {
+        width: 55px;
+        height: 55px;
+    }
 }
 /* Structure Section */
 .structure {
@@ -4688,5 +4977,320 @@ main .hero {
     .efficiency__category-icon {
         width: 35px;
         height: 35px;
+    }
+}
+
+
+/* Structure Section */
+.structure {
+    padding: 60px 0;
+    background: var(--gradient-bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.structure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, var(--bg-green-light) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.structure__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.structure__chart-container {
+    background: var(--bg-white-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid var(--border-green-medium);
+    backdrop-filter: blur(10px);
+}
+
+.structure__chart-wrapper {
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.structure__chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.structure__chart-percentage {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.structure__chart-label {
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.structure__legend {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.structure__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.structure__legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.structure__legend-color--ceo {
+    background: rgba(76, 175, 80, 0.9);
+}
+
+.structure__legend-color--first {
+    background: rgba(33, 150, 243, 0.9);
+}
+
+.structure__legend-color--second {
+    background: rgba(255, 152, 0, 0.9);
+}
+
+.structure__legend-text {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.structure__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.structure__card {
+    background: var(--bg-white-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid var(--border-green-medium);
+    backdrop-filter: blur(10px);
+}
+
+.structure__card:hover {
+    transform: translateY(-5px);
+}
+
+.structure__card--ceo:hover {
+    box-shadow: 0 15px 40px var(--shadow-green-medium);
+    border-color: var(--border-green-strong);
+}
+
+.structure__card--first:hover {
+    box-shadow: 0 15px 40px rgba(33, 150, 243, 0.15);
+    border-color: rgba(33, 150, 243, 0.3);
+}
+
+.structure__card--second:hover {
+    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.15);
+    border-color: rgba(255, 152, 0, 0.3);
+}
+
+.structure__card-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    border-radius: 50%;
+    transform: translate(25px, -25px);
+}
+
+.structure__card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    z-index: 2;
+}
+
+.structure__card-header {
+    padding: 25px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.structure__card--ceo .structure__card-header {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.structure__card--first .structure__card-header {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
+.structure__card--second .structure__card-header {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.structure__card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.structure__card-icon i {
+    color: white;
+}
+
+.structure__card-title {
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    color: white;
+}
+
+.structure__equity-badge {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    font-weight: 600;
+    margin-top: 8px;
+    opacity: 0.9;
+    color: white;
+}
+
+.structure__responsibilities {
+    padding: 25px;
+}
+
+.structure__responsibility {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.structure__responsibility:last-child {
+    margin-bottom: 0;
+}
+
+.structure__responsibility-icon {
+    font-size: 16px;
+    color: #007bff;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.structure__card--ceo .structure__responsibility-icon {
+    color: #4caf50;
+}
+
+.structure__card--first .structure__responsibility-icon {
+    color: #2196f3;
+}
+
+.structure__card--second .structure__responsibility-icon {
+    color: #ff9800;
+}
+
+.structure__responsibility-text {
+    font-size: clamp(0.85rem, 1.7vw, 0.95rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.structure__highlight {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.structure__investment {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-right: 8px;
+}
+
+.structure__currency {
+    font-size: 0.9em;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.structure__amount {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.structure__card--second .structure__currency {
+    color: #ff9800;
+}
+
+.structure__card--second .structure__amount {
+    color: #ff9800;
+}
+
+@media (max-width: 768px) {
+    .structure__content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .structure__chart-container {
+        padding: 25px;
+    }
+    
+    .structure__chart-wrapper {
+        height: 250px;
+        margin-bottom: 25px;
+    }
+    
+    .structure__legend {
+        gap: 12px;
+    }
+    
+    .structure__cards {
+        gap: 15px;
+    }
+    
+    .structure__card-header {
+        padding: 20px;
+    }
+    
+    .structure__responsibilities {
+        padding: 20px;
+    }
+    
+    .structure__card-icon {
+        font-size: 36px;
     }
 }
