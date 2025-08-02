@@ -1876,165 +1876,670 @@ main .hero {
     color: var(--primary-green);
     font-weight: 700;
 }
+/* Marketing Section - Enhanced with Color Themes */
 .marketing {
     padding: 100px 0;
     background: var(--bg-darker);
 }
-.marketing__strategy {
-    display: grid;
-    gap: 50px;
-}
-.marketing__goal h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--primary-green);
-    margin-bottom: 40px;
-}
-.marketing__channels {
+
+.marketing__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
 }
-.marketing__channel {
+
+.marketing__card {
     background: var(--bg-white-light);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid var(--border-green-medium);
-}
-.marketing__channel h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--primary-green);
-}
-.marketing__budget {
-    background: var(--bg-green-medium);
-    color: var(--primary-green);
-    padding: 8px 15px;
     border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-.marketing__channel ul {
-    list-style: none;
     padding: 0;
-}
-.marketing__channel li {
-    padding: 8px 0;
-    padding-left: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     position: relative;
-    color: var(--text-muted);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-green-light);
 }
-.marketing__channel li::before {
-    content: '→';
+
+.marketing__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.marketing__pattern {
     position: absolute;
-    left: 0;
-    color: var(--primary-green);
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    opacity: 0.03;
+    background-image: linear-gradient(45deg, currentColor 25%, transparent 25%, transparent 50%, currentColor 50%, currentColor 75%, transparent 75%, transparent);
+    background-size: 10px 10px;
+}
+
+.marketing__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.marketing__icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.marketing__title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    margin: 0 15px;
+    flex-grow: 1;
+}
+
+.marketing__budget {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.marketing__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.marketing__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.marketing__item-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+
+.marketing__item-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.marketing__highlight {
     font-weight: 700;
 }
-/* Operational Efficiency Section */
+
+/* Digital Marketing - Blue Theme */
+.marketing__card--digital .marketing__header {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.marketing__card--digital .marketing__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.marketing__card--digital .marketing__pattern {
+    color: #3b82f6;
+}
+
+.marketing__card--digital .marketing__item-icon {
+    color: #3b82f6;
+}
+
+.marketing__card--digital .marketing__highlight {
+    color: #3b82f6;
+}
+
+/* Partnership - Green Theme */
+.marketing__card--partnership .marketing__header {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.marketing__card--partnership .marketing__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.marketing__card--partnership .marketing__pattern {
+    color: #10b981;
+}
+
+.marketing__card--partnership .marketing__item-icon {
+    color: #10b981;
+}
+
+.marketing__card--partnership .marketing__highlight {
+    color: #10b981;
+}
+
+/* Local Marketing - Purple Theme */
+.marketing__card--local .marketing__header {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.marketing__card--local .marketing__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.marketing__card--local .marketing__pattern {
+    color: #8b5cf6;
+}
+
+.marketing__card--local .marketing__item-icon {
+    color: #8b5cf6;
+}
+
+.marketing__card--local .marketing__highlight {
+    color: #8b5cf6;
+}
+
+/* Promo Strategy - Orange Theme */
+.marketing__card--promo .marketing__header {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.marketing__card--promo .marketing__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.marketing__card--promo .marketing__pattern {
+    color: #f59e0b;
+}
+
+.marketing__card--promo .marketing__item-icon {
+    color: #f59e0b;
+}
+
+.marketing__card--promo .marketing__highlight {
+    color: #f59e0b;
+}
+
+/* Marketing Responsive Design */
+@media (max-width: 768px) {
+    .marketing__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .marketing__header {
+        padding: 20px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .marketing__title {
+        margin: 0;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+    
+    .marketing__icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .marketing__list {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .marketing__item {
+        gap: 12px;
+    }
+    
+    .marketing__item-text {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+    
+    .marketing__pattern {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marketing {
+        padding: 80px 0;
+    }
+    
+    .marketing__header {
+        padding: 18px 20px;
+    }
+    
+    .marketing__list {
+        padding: 20px 15px;
+    }
+    
+    .marketing__budget {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+}
+/* Operational Efficiency Section - Enhanced with Color Themes */
 .operational-efficiency {
     padding: 100px 0;
     background: var(--bg-dark);
 }
-.efficiency__overview {
-    display: grid;
-    gap: 60px;
-}
-.efficiency__optimization h3,
-.efficiency__revenue h3 {
-    font-size: 1.8rem;
+
+.efficiency__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 600;
-    margin-bottom: 30px;
-    color: var(--primary-green);
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
-.efficiency__category {
+
+.efficiency__section-title i {
+    color: #4fc3f7;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.efficiency__container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.efficiency__left-column,
+.efficiency__right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.efficiency__box {
     background: var(--bg-white-light);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid var(--border-green-medium);
-    margin-bottom: 30px;
-}
-.efficiency__category h4 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--primary-green);
-}
-.efficiency__list {
-    list-style: none;
+    border-radius: 20px;
     padding: 0;
-    display: grid;
-    gap: 10px;
-}
-.efficiency__list li {
-    padding: 10px 0;
-    padding-left: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     position: relative;
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: color 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-green-light);
+    flex-grow: 1;
 }
-.efficiency__list li::before {
-    content: '•';
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    color: var(--primary-green);
-    font-size: 1.2rem;
+
+.efficiency__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.efficiency__box-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.efficiency__box-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+.efficiency__box-title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+.efficiency__highlight {
     font-weight: 700;
 }
-.efficiency__list li:hover {
-    color: var(--text-primary);
+
+/* Centralized Functions - Blue Theme */
+.efficiency__box--centralized .efficiency__box-header {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
 }
-.efficiency__revenue {
-    background: var(--bg-white-light);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid var(--border-green-medium);
+
+.efficiency__box--centralized .efficiency__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
 }
-.efficiency__revenue-list {
-    list-style: none;
-    padding: 0;
+
+.efficiency__box--centralized .efficiency__highlight {
+    color: #1976d2;
+}
+
+.efficiency__functions-grid {
     display: grid;
-    gap: 12px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+    flex-grow: 1;
 }
-.efficiency__revenue-list li {
-    padding: 12px 0;
-    padding-left: 25px;
-    position: relative;
-    color: var(--text-secondary);
+
+.efficiency__function-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.efficiency__function-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.efficiency__function-icon i {
+    color: #1976d2;
     font-size: 1rem;
+}
+
+.efficiency__function-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Savings - Green Theme */
+.efficiency__box--savings .efficiency__box-header {
+    background: linear-gradient(135deg, #00897b 0%, #00695c 100%);
+}
+
+.efficiency__box--savings .efficiency__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.efficiency__box--savings .efficiency__highlight {
+    color: #00897b;
+}
+
+.efficiency__savings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.efficiency__savings-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.efficiency__savings-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #e0f2f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.efficiency__savings-icon i {
+    color: #00897b;
+    font-size: 1.1rem;
+}
+
+.efficiency__savings-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.efficiency__savings-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
+}
+
+.efficiency__savings-value {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-weight: 700;
+    color: #00897b;
+}
+
+/* Revenue - Purple Theme */
+.efficiency__box--revenue .efficiency__box-header {
+    background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+}
+
+.efficiency__box--revenue .efficiency__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.efficiency__box--revenue .efficiency__highlight {
+    color: #7b1fa2;
+}
+
+.efficiency__revenue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.efficiency__revenue-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.efficiency__revenue-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f3e5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.efficiency__revenue-icon i {
+    color: #7b1fa2;
+    font-size: 1rem;
+}
+
+.efficiency__revenue-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Summary Box */
+.efficiency__summary-box {
+    background: linear-gradient(135deg, rgba(65, 147, 229, 0.1) 0%, rgba(65, 147, 229, 0.05) 100%);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    border-left: 5px solid #0288d1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.efficiency__summary-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.efficiency__summary-icon i {
+    color: #0288d1;
+    font-size: 2rem;
+}
+
+.efficiency__summary-content {
+    flex-grow: 1;
+}
+
+.efficiency__summary-title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 600;
+    color: #0288d1;
+    margin-bottom: 10px;
+}
+
+.efficiency__summary-desc {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
     line-height: 1.5;
-    transition: color 0.2s ease;
 }
-.efficiency__revenue-list li::before {
-    content: '▶';
-    position: absolute;
-    left: 8px;
-    top: 12px;
-    color: var(--primary-green);
-    font-size: 0.8rem;
-    transition: transform 0.2s ease;
+
+/* Operational Efficiency Responsive Design */
+@media (max-width: 768px) {
+    .efficiency__container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .efficiency__left-column,
+    .efficiency__right-column {
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .efficiency__box-header {
+        padding: 20px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .efficiency__box-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+    }
+    
+    .efficiency__box-title {
+        margin: 0;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+    
+    .efficiency__functions-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .efficiency__function-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .efficiency__savings-list {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .efficiency__savings-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .efficiency__revenue-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .efficiency__revenue-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .efficiency__summary-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .efficiency__summary-icon {
+        width: 60px;
+        height: 60px;
+    }
 }
-.efficiency__revenue-list li:hover {
-    color: var(--text-primary);
-}
-.efficiency__revenue-list li:hover::before {
-    transform: translateX(3px);
-}
-.efficiency__revenue-total {
-    text-align: center;
-    font-size: 1.5rem;
-    color: var(--primary-green);
-    background: var(--bg-green-light);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid var(--border-green-semi);
+
+@media (max-width: 480px) {
+    .operational-efficiency {
+        padding: 80px 0;
+    }
+    
+    .efficiency__section-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .efficiency__box-header {
+        padding: 18px 20px;
+    }
+    
+    .efficiency__functions-grid,
+    .efficiency__savings-list,
+    .efficiency__revenue-grid {
+        padding: 20px 15px;
+    }
+    
+    .efficiency__summary-box {
+        padding: 20px 15px;
+    }
+    
+    .efficiency__summary-icon {
+        width: 55px;
+        height: 55px;
+    }
 }
 .risks {
     padding: 100px 0;
@@ -4018,127 +4523,6 @@ main .hero {
     }
 }
 
-/* Marketing Section - Standardized */
-.marketing__subtitle {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.marketing__strategy {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.marketing__channels {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.marketing__channel {
-    background: var(--bg-white-light);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.marketing__channel:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.marketing__channel-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 15px;
-}
-
-.marketing__channel-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: clamp(1.6rem, 4.5vw, 2rem);
-}
-
-.marketing__channel-title {
-    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
-    font-weight: 600;
-    color: var(--text-primary);
-    margin: 0;
-}
-
-.marketing__budget {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: clamp(1rem, 3vw, 1.15rem);
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.marketing__channel-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.marketing__channel-item {
-    font-size: clamp(0.95rem, 3vw, 1.1rem);
-    color: var(--text-secondary);
-    line-height: 1.6;
-    position: relative;
-    padding-left: 20px;
-}
-
-.marketing__channel-item::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.marketing__channel-item:hover {
-    color: var(--text-primary);
-    transform: translateX(5px);
-    transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .marketing__channels {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .marketing__channel {
-        padding: 25px 20px;
-    }
-    
-    .marketing__channel-header {
-        gap: 12px;
-    }
-    
-    .marketing__channel-icon {
-        width: 45px;
-        height: 45px;
-    }
-}
 
 /* Operational Efficiency Section - Standardized */
 .efficiency__overview {
