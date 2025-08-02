@@ -3407,3 +3407,782 @@ main .hero {
         font-size: 1rem !important;
     }
 }
+
+/* Franchise Model Section */
+.franchise__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.franchise__section-title i {
+    margin-right: 12px;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.franchise__container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.franchise__left-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.franchise__right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.franchise__box {
+    background: var(--bg-white-light);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px var(--shadow-white);
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.franchise__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.franchise__box--franchisee {
+    border-left: 5px solid var(--primary-green);
+}
+
+.franchise__box--geography {
+    border-left: 5px solid #2196F3;
+}
+
+.franchise__box--benefits {
+    border-left: 5px solid #9C27B0;
+}
+
+.franchise__box--revenue {
+    border-left: 5px solid #FF9A42;
+}
+
+.franchise__box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.franchise__box-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.franchise__box--franchisee .franchise__box-icon {
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+}
+
+.franchise__box--franchisee .franchise__box-icon i {
+    color: var(--primary-green);
+    font-size: 1.4rem;
+}
+
+.franchise__box--geography .franchise__box-icon {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.1) 100%);
+}
+
+.franchise__box--geography .franchise__box-icon i {
+    color: #2196F3;
+    font-size: 1.4rem;
+}
+
+.franchise__box--benefits .franchise__box-icon {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
+}
+
+.franchise__box--benefits .franchise__box-icon i {
+    color: #9C27B0;
+    font-size: 1.4rem;
+}
+
+.franchise__box--revenue .franchise__box-icon {
+    background: linear-gradient(135deg, rgba(255, 154, 66, 0.15) 0%, rgba(255, 176, 84, 0.1) 100%);
+}
+
+.franchise__box--revenue .franchise__box-icon i {
+    color: #FF9A42;
+    font-size: 1.4rem;
+}
+
+.franchise__box-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+}
+
+.franchise__box--franchisee .franchise__box-title {
+    color: var(--primary-green);
+}
+
+.franchise__box--geography .franchise__box-title {
+    color: #2196F3;
+}
+
+.franchise__box--benefits .franchise__box-title {
+    color: #9C27B0;
+}
+
+.franchise__box--revenue .franchise__box-title {
+    color: #FF9A42;
+}
+
+.franchise__parameter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.franchise__parameter-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+}
+
+.franchise__parameter-label {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.franchise__parameter-value {
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.franchise__geography-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 20px;
+}
+
+.franchise__geography-item {
+    display: flex;
+    align-items: center;
+}
+
+.franchise__geography-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.franchise__geography-icon i {
+    color: #2196F3;
+    font-size: 1.3rem;
+}
+
+.franchise__geography-text {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.franchise__highlight {
+    font-weight: 700;
+}
+
+.franchise__box--franchisee .franchise__highlight {
+    color: var(--primary-green);
+}
+
+.franchise__box--geography .franchise__highlight {
+    color: #2196F3;
+}
+
+.franchise__box--benefits .franchise__highlight {
+    color: #9C27B0;
+}
+
+.franchise__box--revenue .franchise__highlight {
+    color: #FF9A42;
+}
+
+.franchise__map-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 120px;
+    margin-top: 15px;
+}
+
+.franchise__map-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.05) 100%);
+    border: 2px dashed rgba(33, 150, 243, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #2196F3;
+    font-weight: 600;
+    min-height: 120px;
+}
+
+.franchise__map-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.franchise__benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    flex-grow: 1;
+}
+
+.franchise__benefit-item {
+    display: flex;
+    align-items: center;
+}
+
+.franchise__benefit-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.franchise__benefit-icon i {
+    color: #9C27B0;
+    font-size: 1.3rem;
+}
+
+.franchise__benefit-text {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.franchise__revenue-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.franchise__revenue-item:last-child {
+    margin-bottom: 0;
+}
+
+.franchise__revenue-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 154, 66, 0.15) 0%, rgba(255, 176, 84, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.franchise__revenue-icon i {
+    color: #FF9A42;
+    font-size: 1.3rem;
+}
+
+.franchise__revenue-content {
+    flex-grow: 1;
+}
+
+.franchise__revenue-label {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.franchise__revenue-value {
+    font-size: clamp(1.3rem, 3.8vw, 1.6rem);
+    font-weight: 700;
+    color: #FF9A42;
+    margin-bottom: 5px;
+}
+
+.franchise__revenue-desc {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+/* Franchise Model Mobile Styles */
+@media (max-width: 768px) {
+    .franchise__container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .franchise__left-column,
+    .franchise__right-column {
+        width: 100%;
+    }
+    
+    .franchise__parameter-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .franchise__box-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .franchise__geography-icon,
+    .franchise__benefit-icon,
+    .franchise__revenue-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .franchise__map-container {
+        min-height: 100px;
+    }
+    
+    .franchise__map-placeholder {
+        min-height: 100px;
+    }
+    
+    .franchise__map-placeholder i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Technology Section - Standardized */
+.technology__subtitle {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.technology__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-feature {
+    background: var(--bg-white-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tech-feature__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.tech-feature__icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.tech-feature__title {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.tech-feature__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.tech-feature__item {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tech-feature__item::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tech-feature__item:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .technology__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tech-feature {
+        padding: 25px 20px;
+    }
+    
+    .tech-feature__header {
+        gap: 12px;
+    }
+    
+    .tech-feature__icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Marketing Section - Standardized */
+.marketing__subtitle {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.marketing__strategy {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.marketing__channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.marketing__channel {
+    background: var(--bg-white-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketing__channel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.marketing__channel-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.marketing__channel-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.marketing__channel-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.marketing__budget {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.marketing__channel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.marketing__channel-item {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.marketing__channel-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.marketing__channel-item:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .marketing__channels {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .marketing__channel {
+        padding: 25px 20px;
+    }
+    
+    .marketing__channel-header {
+        gap: 12px;
+    }
+    
+    .marketing__channel-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Operational Efficiency Section - Standardized */
+.efficiency__overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.efficiency__optimization,
+.efficiency__revenue {
+    background: var(--bg-white-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.efficiency__section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.efficiency__section-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+}
+
+.efficiency__section-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.efficiency__category {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.efficiency__category:last-child {
+    margin-bottom: 0;
+}
+
+.efficiency__category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.efficiency__category-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+}
+
+.efficiency__category-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.efficiency__list,
+.efficiency__revenue-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.efficiency__list-item,
+.efficiency__revenue-item {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.efficiency__list-item::before,
+.efficiency__revenue-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.efficiency__list-item:hover,
+.efficiency__revenue-item:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.efficiency__revenue-total {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+.efficiency__total-label {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.efficiency__total-amount {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .efficiency__overview {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .efficiency__optimization,
+    .efficiency__revenue {
+        padding: 25px 20px;
+    }
+    
+    .efficiency__section-header {
+        gap: 12px;
+    }
+    
+    .efficiency__section-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .efficiency__category {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .efficiency__category-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
