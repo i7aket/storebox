@@ -1748,78 +1748,88 @@
       <div class="container">
         <h2 class="section-title">Структура</h2>
         <div class="structure__content">
-          <div class="structure__chart-container">
-            <div class="structure__chart-wrapper">
-              <canvas id="equityChart"></canvas>
-              <div class="structure__chart-center">
-                <div class="structure__chart-percentage">100%</div>
-                <div class="structure__chart-label">Total Equity</div>
-              </div>
-            </div>
-            <div class="structure__legend">
-              <div class="structure__legend-item">
-                <div class="structure__legend-color structure__legend-color--ceo"></div>
-                <div class="structure__legend-text">CEO/Засновник</div>
-              </div>
-              <div class="structure__legend-item">
-                <div class="structure__legend-color structure__legend-color--first"></div>
-                <div class="structure__legend-text">Інвестори 1-го раунду</div>
-              </div>
-              <div class="structure__legend-item">
-                <div class="structure__legend-color structure__legend-color--second"></div>
-                <div class="structure__legend-text">Інвестори 2-го раунду</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="structure__cards">
-            <div class="structure__card structure__card--ceo">
-              <div class="structure__card-pattern"></div>
-              <i class="fas fa-crown structure__card-badge"></i>
-              <div class="structure__card-header">
-                <div class="structure__card-icon">
-                  <i class="fas fa-user-tie"></i>
+          <div class="structure__left">
+            <div class="structure__chart-container">
+              <div class="structure__chart-wrapper">
+                <canvas id="equityChart"></canvas>
+                <div class="structure__chart-center">
+                  <div class="structure__chart-percentage">100%</div>
+                  <div class="structure__chart-label">Total Equity</div>
                 </div>
-                <div class="structure__card-title">CEO/Засновник</div>
-                <div class="structure__equity-badge">25%</div>
               </div>
-              <div class="structure__responsibilities">
-                <div class="structure__responsibility">
-                  <i class="fas fa-chart-line structure__responsibility-icon"></i>
-                  <div class="structure__responsibility-text"><span class="structure__highlight">Стратегічний розвиток</span></div>
+              <div class="structure__legend">
+                <div class="structure__legend-item">
+                  <div class="structure__legend-color structure__legend-color--ceo"></div>
+                  <div class="structure__legend-text">CEO</div>
                 </div>
-                <div class="structure__responsibility">
-                  <i class="fas fa-map-marker-alt structure__responsibility-icon"></i>
-                  <div class="structure__responsibility-text">Пошук нових локацій</div>
+                <div class="structure__legend-item">
+                  <div class="structure__legend-color structure__legend-color--founder"></div>
+                  <div class="structure__legend-text">Засновники</div>
                 </div>
-                <div class="structure__responsibility">
-                  <i class="fas fa-handshake structure__responsibility-icon"></i>
-                  <div class="structure__responsibility-text">Розвиток франшизи</div>
+                <div class="structure__legend-item">
+                  <div class="structure__legend-color structure__legend-color--first"></div>
+                  <div class="structure__legend-text">Інвестори 1-го раунду</div>
                 </div>
-                <div class="structure__responsibility">
-                  <i class="fas fa-users structure__responsibility-icon"></i>
-                  <div class="structure__responsibility-text">Ключові партнерства</div>
+                <div class="structure__legend-item">
+                  <div class="structure__legend-color structure__legend-color--second"></div>
+                  <div class="structure__legend-text">Інвестори 2-го раунду</div>
                 </div>
               </div>
             </div>
             
-            <div class="structure__card structure__card--first">
+            <div class="structure__ceo-card">
+              <div class="structure__card structure__card--ceo">
+                <div class="structure__card-pattern"></div>
+  
+                <div class="structure__card-header">
+                  <div class="structure__card-icon">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <div class="structure__card-title">CEO</div>
+                  <div class="structure__equity-badge">10%</div>
+                </div>
+                <div class="structure__responsibilities">
+                  <div class="structure__responsibility">
+                    <i class="fas fa-chart-line structure__responsibility-icon"></i>
+                    <div class="structure__responsibility-text"><span class="structure__highlight">Стратегічний розвиток</span></div>
+                  </div>
+                  <div class="structure__responsibility">
+                    <i class="fas fa-handshake structure__responsibility-icon"></i>
+                    <div class="structure__responsibility-text">Розвиток франшизи</div>
+                  </div>
+                  <div class="structure__responsibility">
+                    <i class="fas fa-map-marker-alt structure__responsibility-icon"></i>
+                    <div class="structure__responsibility-text">Пошук нових локацій</div>
+                  </div>
+                  <div class="structure__responsibility">
+                    <i class="fas fa-users structure__responsibility-icon"></i>
+                    <div class="structure__responsibility-text">Ключові партнерства</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="structure__right">
+            <div class="structure__cards">
+            
+            <div class="structure__card structure__card--founder">
               <div class="structure__card-pattern"></div>
-              <i class="fas fa-coins structure__card-badge"></i>
+
               <div class="structure__card-header">
                 <div class="structure__card-icon">
                   <i class="fas fa-users"></i>
                 </div>
-                <div class="structure__card-title">Інвестори першого раунду</div>
-                <div class="structure__equity-badge">50%</div>
+                <div class="structure__card-title">Засновники</div>
+                <div class="structure__equity-badge">15%</div>
               </div>
               <div class="structure__responsibilities">
                 <div class="structure__responsibility">
-                  <i class="fas fa-money-bill-wave structure__responsibility-icon"></i>
+                  <i class="fas fa-hand-holding-usd structure__responsibility-icon"></i>
                   <div class="structure__responsibility-text">
                     <span class="structure__investment">
                       <span class="structure__currency">€</span>
-                      <span class="structure__amount">150,000</span>
+                      <span class="structure__amount">30,000</span>
                     </span>
                     <span class="structure__highlight">Фінансування</span>
                   </div>
@@ -1829,25 +1839,20 @@
                   <div class="structure__responsibility-text"><span class="structure__highlight">Стратегічний контроль</span></div>
                 </div>
                 <div class="structure__responsibility">
-                  <i class="fas fa-check-circle structure__responsibility-icon"></i>
-                  <div class="structure__responsibility-text">Затвердження рішень</div>
-                </div>
-                <div class="structure__responsibility">
                   <i class="fas fa-coins structure__responsibility-icon"></i>
                   <div class="structure__responsibility-text">Дивіденди з 3-го року</div>
                 </div>
               </div>
             </div>
             
-            <div class="structure__card structure__card--second">
+            <div class="structure__card structure__card--first">
               <div class="structure__card-pattern"></div>
-              <i class="fas fa-chart-pie structure__card-badge"></i>
               <div class="structure__card-header">
                 <div class="structure__card-icon">
-                  <i class="fas fa-university"></i>
+                  <i class="fas fa-users"></i>
                 </div>
-                <div class="structure__card-title">Інвестори другого раунду</div>
-                <div class="structure__equity-badge">25%</div>
+                <div class="structure__card-title">Інвестори першого раунду</div>
+                <div class="structure__equity-badge">50%</div>
               </div>
               <div class="structure__responsibilities">
                 <div class="structure__responsibility">
@@ -1869,6 +1874,38 @@
                   <div class="structure__responsibility-text">Дивіденди з 3-го року</div>
                 </div>
               </div>
+            </div>
+            
+            <div class="structure__card structure__card--second">
+              <div class="structure__card-pattern"></div>
+              <div class="structure__card-header">
+                <div class="structure__card-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="structure__card-title">Інвестори другого раунду</div>
+                <div class="structure__equity-badge">25%</div>
+              </div>
+              <div class="structure__responsibilities">
+                <div class="structure__responsibility">
+                  <i class="fas fa-hand-holding-usd structure__responsibility-icon"></i>
+                  <div class="structure__responsibility-text">
+                    <span class="structure__investment">
+                      <span class="structure__currency">€</span>
+                      <span class="structure__amount">150,000</span>
+                    </span>
+                    <span class="structure__highlight">Фінансування</span>
+                  </div>
+                </div>
+                <div class="structure__responsibility">
+                  <i class="fas fa-check-circle structure__responsibility-icon"></i>
+                  <div class="structure__responsibility-text"><span class="structure__highlight">Участь в управлінні</span></div>
+                </div>
+                <div class="structure__responsibility">
+                  <i class="fas fa-coins structure__responsibility-icon"></i>
+                  <div class="structure__responsibility-text">Дивіденди з 3-го року</div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -1915,7 +1952,7 @@
               </ul>
               <div class="investment__dividends">
                 <div class="dividend-item">Інвестори 1-го раунду (50%): €25 000</div>
-                <div class="dividend-item">Інвестори 2-го раунду (25%): €12 500</div>
+                <div class="dividend-item">Інвестори 1-го раунду (50%): €12 500</div>
                 <div class="dividend-item">CEO (25%): €12 500</div>
               </div>
             </div>
@@ -1931,7 +1968,7 @@
               </ul>
               <div class="investment__dividends">
                 <div class="dividend-item">Інвестори 1-го раунду (50%): €50 000</div>
-                <div class="dividend-item">Інвестори 2-го раунду (25%): €25 000</div>
+                <div class="dividend-item">Інвестори 1-го раунду (50%): €25 000</div>
                 <div class="dividend-item">CEO (25%): €25 000</div>
               </div>
             </div>
@@ -1947,7 +1984,7 @@
               </ul>
               <div class="investment__dividends">
                 <div class="dividend-item">Інвестори 1-го раунду (50%): €100 000</div>
-                <div class="dividend-item">Інвестори 2-го раунду (25%): €50 000</div>
+                <div class="dividend-item">Інвестори 1-го раунду (50%): €50 000</div>
                 <div class="dividend-item">CEO (25%): €50 000</div>
               </div>
               <div class="investment__exit">
@@ -2613,11 +2650,12 @@
     const equityChart = new Chart(equityCtx, {
       type: 'doughnut',
       data: {
-        labels: ['CEO/Founder', 'First Round Investors', 'Second Round Investors'],
+        labels: ['CEO', 'Засновники', 'Інвестори 1-го раунду', 'Інвестори 2-го раунду'],
         datasets: [{
-          data: [25, 50, 25],
+          data: [10, 15, 50, 25],
           backgroundColor: [
             'rgba(76, 175, 80, 0.9)',
+            'rgba(156, 39, 176, 0.9)',
             'rgba(33, 150, 243, 0.9)',
             'rgba(255, 152, 0, 0.9)'
           ],
