@@ -738,7 +738,6 @@ main .hero {
 
 .large-warehouses {
     border-color: var(--error);
-    border-left: 5px solid var(--error);
 }
 
 .large-warehouses:hover {
@@ -749,7 +748,6 @@ main .hero {
 
 .small-spaces {
     border-color: var(--primary-green);
-    border-left: 5px solid var(--primary-green);
 }
 
 .small-spaces:hover {
