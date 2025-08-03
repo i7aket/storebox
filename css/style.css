@@ -63,10 +63,15 @@
     --shadow-orange-medium: rgba(255, 152, 0, 0.15);
     --border-orange-medium: rgba(255, 152, 0, 0.3);
     
+    /* Red Colors (Loading Risk) */
+    --shadow-red-medium: rgba(244, 67, 54, 0.15);
+    --border-red-medium: rgba(244, 67, 54, 0.3);
+    
     /* Light Border Colors for Normal State */
     --border-purple-light: rgba(156, 39, 176, 0.15);
     --border-blue-light: rgba(33, 150, 243, 0.15);
     --border-orange-light: rgba(255, 152, 0, 0.15);
+    --border-red-light: rgba(244, 67, 54, 0.15);
     
     /* Status Colors */
     --success: #54FF8F;
@@ -2681,6 +2686,7 @@ main .hero {
 
 /* Loading Risk - Red Theme */
 .risk__card--loading {
+    border-color: var(--border-red-light);
 }
 
 .risk__card--loading .risk__header {
@@ -2706,6 +2712,7 @@ main .hero {
 
 /* Competition Risk - Orange Theme */
 .risk__card--competition {
+    border-color: var(--border-orange-light);
 }
 
 .risk__card--competition .risk__header {
@@ -2731,6 +2738,7 @@ main .hero {
 
 /* Economic Risk - Blue Theme */
 .risk__card--economic {
+    border-color: var(--border-blue-light);
 }
 
 .risk__card--economic .risk__header {
@@ -2756,6 +2764,7 @@ main .hero {
 
 /* Development Risk - Purple Theme */
 .risk__card--development {
+    border-color: var(--border-purple-light);
 }
 
 .risk__card--development .risk__header {
@@ -2777,6 +2786,27 @@ main .hero {
 
 .risk__card--development .risk__highlight {
     color: #9c27b0;
+}
+
+/* Risk Card Hover Effects */
+.risk__card--loading:hover {
+    border-color: var(--border-red-medium);
+    box-shadow: 0 8px 30px var(--shadow-red-medium);
+}
+
+.risk__card--competition:hover {
+    border-color: var(--border-orange-medium);
+    box-shadow: 0 8px 30px var(--shadow-orange-medium);
+}
+
+.risk__card--economic:hover {
+    border-color: var(--border-blue-medium);
+    box-shadow: 0 8px 30px var(--shadow-blue-medium);
+}
+
+.risk__card--development:hover {
+    border-color: var(--border-purple-medium);
+    box-shadow: 0 8px 30px var(--shadow-purple-medium);
 }
 
 /* Summary Box */
