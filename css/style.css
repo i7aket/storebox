@@ -1025,7 +1025,7 @@ main .hero {
     color: #ff9800;
 }
 .competitor--our .competitor__segment {
-    background-color: rgba(76, 175, 80, 0.1);
+    background-color: rgba(84, 255, 143, 0.1);
     color: var(--primary-green);
 }
 .competitor__prices {
@@ -1085,7 +1085,7 @@ main .hero {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(76, 175, 80, 0.1);
+    background: rgba(84, 255, 143, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1850,10 +1850,193 @@ main .hero {
     margin-bottom: 20px;
     color: var(--primary-green);
 }
-.technology__grid {
+/* Technology Container - Modern Layout */
+.technology__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.technology__box {
+    background: var(--bg-white-light);
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-green-light);
+    flex-grow: 1;
+}
+
+.technology__box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Technology Box Colored Borders */
+.technology__box--client {
+    border: 1px solid rgba(25, 118, 210, 0.15);
+}
+
+.technology__box--client:hover {
+    border-color: rgba(25, 118, 210, 0.3);
+    box-shadow: 0 8px 30px rgba(25, 118, 210, 0.15);
+}
+
+.technology__box--management {
+    border: 1px solid rgba(84, 255, 143, 0.15);
+}
+
+.technology__box--management:hover {
+    border-color: rgba(84, 255, 143, 0.3);
+    box-shadow: 0 8px 30px rgba(84, 255, 143, 0.15);
+}
+
+.technology__box--security {
+    border: 1px solid rgba(123, 31, 162, 0.15);
+}
+
+.technology__box--security:hover {
+    border-color: rgba(123, 31, 162, 0.3);
+    box-shadow: 0 8px 30px rgba(123, 31, 162, 0.15);
+}
+
+.technology__box-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.technology__box-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+.technology__box-title {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+.technology__highlight {
+    font-weight: 700;
+}
+
+/* Client (Portal) - Blue Theme */
+.technology__box--client .technology__box-header {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+}
+
+.technology__box--client .technology__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.technology__box--client .technology__highlight {
+    color: #1976d2;
+}
+
+/* Management - Green Theme */
+.technology__box--management .technology__box-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+}
+
+.technology__box--management .technology__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.technology__box--management .technology__highlight {
+    color: var(--primary-green);
+}
+
+/* Security - Purple Theme */
+.technology__box--security .technology__box-header {
+    background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+}
+
+.technology__box--security .technology__box-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.technology__box--security .technology__highlight {
+    color: #7b1fa2;
+}
+
+.technology__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.technology__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.technology__item-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.technology__box--client .technology__item-icon {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.1) 100%);
+    border: 2px solid rgba(33, 150, 243, 0.3);
+}
+
+.technology__box--client .technology__item-icon i {
+    color: #2196F3;
+}
+
+.technology__box--management .technology__item-icon {
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+    border: 2px solid var(--primary-green-light);
+}
+
+.technology__box--management .technology__item-icon i {
+    color: var(--primary-green);
+}
+
+.technology__box--security .technology__item-icon {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
+    border: 2px solid rgba(156, 39, 176, 0.3);
+}
+
+.technology__box--security .technology__item-icon i {
+    color: #9C27B0;
+}
+
+.technology__item-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    color: var(--text-secondary);
+    flex-grow: 1;
 }
 .tech-feature {
     background: var(--bg-white-light);
@@ -1911,22 +2094,25 @@ main .hero {
 }
 
 .marketing__card {
-    background: var(--bg-white-light);
-    border-radius: 20px;
-    padding: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border-green-light);
+  background: var(--bg-white-light);
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-green-light);
 }
 
 .marketing__card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  border-color: var(--border-green-medium);
+  box-shadow: 0 8px 30px var(--shadow-green-medium);
 }
+
+
 
 .marketing__pattern {
     position: absolute;
@@ -2029,9 +2215,13 @@ main .hero {
     color: #3b82f6;
 }
 
-/* Partnership - Green Theme */
+/* /* Partnership - Green Theme */
+.marketing__card--partnership {
+    border-color: var(--border-green-light);
+}
+
 .marketing__card--partnership .marketing__header {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
 }
 
 .marketing__card--partnership .marketing__icon {
@@ -2040,15 +2230,20 @@ main .hero {
 }
 
 .marketing__card--partnership .marketing__pattern {
-    color: #10b981;
+    color: var(--primary-green);
 }
 
 .marketing__card--partnership .marketing__item-icon {
-    color: #10b981;
+    color: var(--primary-green);
 }
 
 .marketing__card--partnership .marketing__highlight {
-    color: #10b981;
+    color: var(--primary-green);
+}
+
+.marketing__card--partnership:hover {
+    border-color: var(--border-green-medium);
+    box-shadow: 0 8px 30px var(--shadow-green-medium);
 }
 
 /* Local Marketing - Purple Theme */
@@ -2092,8 +2287,12 @@ main .hero {
 }
 
 .marketing__card--promo .marketing__highlight {
-    color: #f59e0b;
+  color: #f59e0b;
 }
+
+
+
+
 
 /* Marketing Responsive Design */
 @media (max-width: 768px) {
@@ -2232,12 +2431,12 @@ main .hero {
 }
 
 .efficiency__box--revenue {
-    border: 1px solid rgba(76, 175, 80, 0.15);
+    border: 1px solid rgba(84, 255, 143, 0.15);
 }
 
 .efficiency__box--revenue:hover {
-    border-color: rgba(76, 175, 80, 0.3);
-    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.15);
+    border-color: rgba(84, 255, 143, 0.3);
+    box-shadow: 0 8px 30px rgba(84, 255, 143, 0.15);
 }
 
 .efficiency__box-header {
@@ -2304,12 +2503,14 @@ main .hero {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #e3f2fd;
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.15) 0%, rgba(25, 118, 210, 0.1) 100%);
+    border: 2px solid rgba(25, 118, 210, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .efficiency__function-icon i {
@@ -2356,11 +2557,13 @@ main .hero {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #fff3e0;
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.15) 0%, rgba(255, 152, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 152, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .efficiency__savings-icon i {
@@ -2388,7 +2591,7 @@ main .hero {
 
 /* Revenue - Green Theme */
 .efficiency__box--revenue .efficiency__box-header {
-    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
 }
 
 .efficiency__box--revenue .efficiency__box-icon {
@@ -2397,7 +2600,7 @@ main .hero {
 }
 
 .efficiency__box--revenue .efficiency__highlight {
-    color: #4caf50;
+    color: var(--primary-green);
 }
 
 .efficiency__revenue-grid {
@@ -2418,16 +2621,18 @@ main .hero {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #e8f5e8;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.1) 100%);
+    border: 2px solid rgba(76, 175, 80, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .efficiency__revenue-icon i {
-    color: #4caf50;
+    color: var(--primary-green);
     font-size: 1rem;
 }
 
@@ -3188,7 +3393,9 @@ main .hero {
     justify-content: center;
     margin-right: 15px;
     flex-shrink: 0;
-    background: var(--bg-green-light);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(56, 142, 60, 0.15) 100%);
+    border: 2px solid rgba(76, 175, 80, 0.4);
+    transition: all 0.3s ease;
 }
 
 .timing__driver-icon span {
@@ -5082,7 +5289,7 @@ main .hero {
     gap: 20px;
     border-left: 5px solid #FF9800;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 .technology__advantage-icon {
@@ -5115,30 +5322,39 @@ main .hero {
     line-height: 1.5;
 }
 
+/* Technology Container Responsive Design */
 @media (max-width: 768px) {
-    .technology__grid {
+    .technology__container {
         grid-template-columns: 1fr;
         gap: 20px;
-        margin-bottom: 30px;
     }
     
-    .tech-feature__header--colored {
-        padding: 20px;
-    }
-    
-    .tech-feature__content {
-        padding: 20px;
+    .technology__box-header {
+        padding: 20px 25px;
+        flex-direction: column;
+        text-align: center;
         gap: 15px;
     }
     
-    .tech-feature__icon--large {
+    .technology__box-icon {
         width: 50px;
         height: 50px;
+        margin-right: 0;
     }
     
-    .tech-feature__item-icon {
-        width: 35px;
-        height: 35px;
+    .technology__box-title {
+        margin: 0;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+    
+    .technology__content {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+    
+    .technology__item-icon {
+        width: 40px;
+        height: 40px;
     }
     
     .technology__advantage {
@@ -5404,7 +5620,7 @@ main .hero {
 }
 
 .structure__legend-color--ceo {
-    background: rgba(76, 175, 80, 0.9);
+    background: rgba(84, 255, 143, 0.9);
 }
 
 .structure__legend-color--founder {
@@ -5532,7 +5748,7 @@ main .hero {
 }
 
 .structure__card--ceo .structure__card-header {
-    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
 }
 
 .structure__card--founder .structure__card-header {
@@ -5596,7 +5812,7 @@ main .hero {
 }
 
 .structure__card--ceo .structure__responsibility-icon {
-    color: #4caf50;
+    color: var(--primary-green);
 }
 
 .structure__card--founder .structure__responsibility-icon {
