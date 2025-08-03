@@ -2565,7 +2565,7 @@ main .hero {
 }
 
 .risks__section-title {
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-size: 3rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 40px;
