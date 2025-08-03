@@ -2208,8 +2208,36 @@ main .hero {
 }
 
 .efficiency__box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Efficiency Box Colored Borders - matching project design patterns */
+.efficiency__box--centralized {
+    border: 1px solid rgba(25, 118, 210, 0.15);
+}
+
+.efficiency__box--centralized:hover {
+    border-color: rgba(25, 118, 210, 0.3);
+    box-shadow: 0 8px 30px rgba(25, 118, 210, 0.15);
+}
+
+.efficiency__box--savings {
+    border: 1px solid rgba(255, 152, 0, 0.15);
+}
+
+.efficiency__box--savings:hover {
+    border-color: rgba(255, 152, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(255, 152, 0, 0.15);
+}
+
+.efficiency__box--revenue {
+    border: 1px solid rgba(76, 175, 80, 0.15);
+}
+
+.efficiency__box--revenue:hover {
+    border-color: rgba(76, 175, 80, 0.3);
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.15);
 }
 
 .efficiency__box-header {
@@ -2298,7 +2326,7 @@ main .hero {
 
 /* Savings - Green Theme */
 .efficiency__box--savings .efficiency__box-header {
-    background: linear-gradient(135deg, #00897b 0%, #00695c 100%);
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
 }
 
 .efficiency__box--savings .efficiency__box-icon {
@@ -2307,7 +2335,7 @@ main .hero {
 }
 
 .efficiency__box--savings .efficiency__highlight {
-    color: #00897b;
+    color: #ff9800;
 }
 
 .efficiency__savings-list {
@@ -2328,7 +2356,7 @@ main .hero {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #e0f2f1;
+    background-color: #fff3e0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2336,7 +2364,7 @@ main .hero {
 }
 
 .efficiency__savings-icon i {
-    color: #00897b;
+    color: #ff9800;
     font-size: 1.1rem;
 }
 
@@ -2355,12 +2383,12 @@ main .hero {
 .efficiency__savings-value {
     font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-weight: 700;
-    color: #00897b;
+    color: #ff9800;
 }
 
-/* Revenue - Purple Theme */
+/* Revenue - Green Theme */
 .efficiency__box--revenue .efficiency__box-header {
-    background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
 }
 
 .efficiency__box--revenue .efficiency__box-icon {
@@ -2369,7 +2397,7 @@ main .hero {
 }
 
 .efficiency__box--revenue .efficiency__highlight {
-    color: #7b1fa2;
+    color: #4caf50;
 }
 
 .efficiency__revenue-grid {
@@ -2390,7 +2418,7 @@ main .hero {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #f3e5f5;
+    background-color: #e8f5e8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2399,7 +2427,7 @@ main .hero {
 }
 
 .efficiency__revenue-icon i {
-    color: #7b1fa2;
+    color: #4caf50;
     font-size: 1rem;
 }
 
@@ -4900,15 +4928,16 @@ main .hero {
     background: var(--bg-white-light);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--border-green-light);
 }
 
 .tech-feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .tech-feature__header--colored {
@@ -4932,6 +4961,34 @@ main .hero {
 
 .tech-feature--security .tech-feature__header--colored {
     background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+}
+
+/* Tech Feature Colored Borders - matching project design patterns */
+.tech-feature--client {
+    border: 1px solid rgba(25, 118, 210, 0.15);
+}
+
+.tech-feature--client:hover {
+    border-color: rgba(25, 118, 210, 0.3);
+    box-shadow: 0 8px 30px rgba(25, 118, 210, 0.15);
+}
+
+.tech-feature--management {
+    border: 1px solid rgba(0, 137, 123, 0.15);
+}
+
+.tech-feature--management:hover {
+    border-color: rgba(0, 137, 123, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 137, 123, 0.15);
+}
+
+.tech-feature--security {
+    border: 1px solid rgba(123, 31, 162, 0.15);
+}
+
+.tech-feature--security:hover {
+    border-color: rgba(123, 31, 162, 0.3);
+    box-shadow: 0 8px 30px rgba(123, 31, 162, 0.15);
 }
 
 .tech-feature__icon--large {
@@ -5198,8 +5255,7 @@ main .hero {
     padding-left: 20px;
 }
 
-.efficiency__list-item::before,
-.efficiency__revenue-item::before {
+.efficiency__list-item::before {
     content: '▸';
     position: absolute;
     left: 0;
@@ -5207,8 +5263,7 @@ main .hero {
     font-weight: bold;
 }
 
-.efficiency__list-item:hover,
-.efficiency__revenue-item:hover {
+.efficiency__list-item:hover {
     color: var(--text-primary);
     transform: translateX(5px);
     transition: all 0.3s ease;
