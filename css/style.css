@@ -3470,7 +3470,6 @@ main .hero {
 }
 .success-stories {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 .success__overview {
     display: grid;
