@@ -1643,7 +1643,7 @@ main .hero {
     line-height: 1.3;
 }
 .scenario-desc .highlight {
-    color: var(--warning);
+    color: var(--primary-green);
     font-weight: 700;
 }
 .financial__metrics-container {
