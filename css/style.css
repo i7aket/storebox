@@ -5462,6 +5462,11 @@ main .hero {
     gap: 22px;
 }
 
+.efficiency__revenue-list {
+    padding-top: 30px;
+    gap: 30px;
+}
+
 .efficiency__list-item,
 .efficiency__revenue-item {
     font-size: clamp(0.95rem, 3vw, 1.1rem);
