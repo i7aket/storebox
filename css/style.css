@@ -52,9 +52,9 @@
     --border-gray: #475B5E;
     
     /* Purple Colors (Founders) */
-    --shadow-purple-medium: rgba(156, 39, 176, 0.15);
-    --border-purple-medium: rgba(156, 39, 176, 0.3);
-    --border-purple-strong: rgba(156, 39, 176, 0.6);
+    --shadow-purple-medium: rgba(139, 92, 246, 0.15);
+    --border-purple-medium: rgba(139, 92, 246, 0.3);
+    --border-purple-strong: rgba(139, 92, 246, 0.6);
     
     /* Blue Colors (2nd Round Investors) */
     --shadow-blue-medium: rgba(33, 150, 243, 0.15);
@@ -71,7 +71,7 @@
     --border-red-medium: rgba(244, 67, 54, 0.3);
     
     /* Light Border Colors for Normal State */
-    --border-purple-light: rgba(156, 39, 176, 0.2);
+    --border-purple-light: rgba(139, 92, 246, 0.2);
     --border-blue-light: rgba(33, 150, 243, 0.2);
     --border-orange-light: rgba(255, 152, 0, 0.2);
     --border-red-light: rgba(244, 67, 54, 0.15);
@@ -964,8 +964,8 @@ main .hero {
     background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, var(--bg-white) 100%);
 }
 .competitor--myplace {
-    border-top: 5px solid #9c27b0;
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, var(--bg-white) 100%);
+    border-top: 5px solid #8b5cf6;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, var(--bg-white) 100%);
 }
 .competitor--xxlager {
     border-top: 5px solid #ff9800;
@@ -1000,7 +1000,7 @@ main .hero {
     color: #1976d2;
 }
 .competitor--myplace .competitor__name {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 .competitor--xxlager .competitor__name {
     color: #ff9800;
@@ -1020,8 +1020,8 @@ main .hero {
     color: #1976d2;
 }
 .competitor--myplace .competitor__segment {
-    background-color: rgba(156, 39, 176, 0.1);
-    color: #9c27b0;
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
 }
 .competitor--xxlager .competitor__segment {
     background-color: rgba(255, 152, 0, 0.1);
@@ -2097,7 +2097,7 @@ main .hero {
 
 /* Security - Purple Theme */
 .technology__box--security .technology__box-header {
-    background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #7c3aed 100%);
 }
 
 .technology__box--security .technology__box-icon {
@@ -2105,7 +2105,7 @@ main .hero {
 }
 
 .technology__box--security .technology__highlight {
-    color: #7b1fa2;
+    color: #7c3aed;
 }
 
 .technology__content {
@@ -2154,12 +2154,12 @@ main .hero {
 }
 
 .technology__box--security .technology__item-icon {
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
-    border: 2px solid rgba(156, 39, 176, 0.3);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: 2px solid rgba(139, 92, 246, 0.3);
 }
 
 .technology__box--security .technology__item-icon i {
-    color: #9C27B0;
+    color: #8b5cf6;
 }
 
 .technology__item-text {
@@ -3170,7 +3170,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .risk__card--development .risk__header {
-    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
 .risk__card--development .risk__icon {
@@ -3178,19 +3178,19 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .risk__card--development .risk__mitigation-title i {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .risk__card--development .risk__strategy-icon {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .risk__card--development .risk__highlight {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .risk__card--development .risk__pattern {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 /* Risk Card Hover Effects */
@@ -4957,7 +4957,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .franchise__box--benefits {
-    border-left: 5px solid #9C27B0;
+    border-left: 5px solid #8b5cf6;
 }
 
 .franchise__box--revenue {
@@ -5001,11 +5001,11 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .franchise__box--benefits .franchise__box-icon {
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
 }
 
 .franchise__box--benefits .franchise__box-icon i {
-    color: #9C27B0;
+    color: #8b5cf6;
     font-size: 1.4rem;
 }
 
@@ -5032,7 +5032,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .franchise__box--benefits .franchise__box-title {
-    color: #9C27B0;
+    color: #8b5cf6;
 }
 
 .franchise__box--revenue .franchise__box-title {
@@ -5113,7 +5113,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .franchise__box--benefits .franchise__highlight {
-    color: #9C27B0;
+    color: #8b5cf6;
 }
 
 .franchise__box--revenue .franchise__highlight {
@@ -5166,7 +5166,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5175,7 +5175,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .franchise__benefit-icon i {
-    color: #9C27B0;
+    color: #8b5cf6;
     font-size: 1.3rem;
 }
 
@@ -5340,7 +5340,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .tech-feature--security .tech-feature__header--colored {
-    background: linear-gradient(135deg, #7b1fa2 0%, #6a1b9a 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #7c3aed 100%);
 }
 
 /* Tech Feature Colored Borders - matching project design patterns */
@@ -5427,7 +5427,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 
 .tech-feature--security .tech-feature__item-icon {
     background: rgba(123, 31, 162, 0.1);
-    color: #7b1fa2;
+    color: #7c3aed;
 }
 
 .tech-feature__item-text {
@@ -5450,7 +5450,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .tech-feature--security .tech-feature__highlight {
-    color: #7b1fa2;
+    color: #7c3aed;
 }
 
 .technology__advantage {
@@ -5800,7 +5800,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .structure__legend-color--founder {
-    background: rgba(156, 39, 176, 0.9);
+    background: rgba(139, 92, 246, 0.9);
 }
 
 .structure__legend-color--first {
@@ -5928,7 +5928,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .structure__card--founder .structure__card-header {
-    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
 .structure__card--first .structure__card-header {
@@ -5944,7 +5944,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .structure__card--founder .structure__card-pattern {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .structure__card--first .structure__card-pattern {
@@ -6008,7 +6008,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .structure__card--founder .structure__responsibility-icon {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .structure__card--first .structure__responsibility-icon {
@@ -6050,11 +6050,11 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .structure__card--founder .structure__currency {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .structure__card--founder .structure__amount {
-    color: #9c27b0;
+    color: #8b5cf6;
 }
 
 .structure__card--second .structure__currency {
