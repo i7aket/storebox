@@ -1166,9 +1166,38 @@ main .hero {
     gap: 10px;
 }
 .property__feature {
-    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.property__feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-green-very-light) 100%);
+    border: 2px solid var(--border-green-medium);
+    transition: all 0.3s ease;
+}
+
+.property__feature-icon i {
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+
+.property__feature-content {
+    flex-grow: 1;
+}
+
+.property__feature-text {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-green);
+    line-height: 1.4;
 }
 /* Development Plan - Timeline */
 .development-plan {
