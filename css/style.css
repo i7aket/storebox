@@ -2107,13 +2107,13 @@ main .hero {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-green-light);
+  border: 1px solid var(--border-blue-light);
 }
 
 .marketing__card:hover {
   transform: translateY(-8px);
-  border-color: var(--border-green-medium);
-  box-shadow: 0 8px 30px var(--shadow-green-medium);
+  border-color: var(--border-blue-medium);
+  box-shadow: 0 8px 30px var(--shadow-blue-medium);
 }
 
 
@@ -2197,6 +2197,43 @@ main .hero {
     font-weight: 700;
 }
 
+/* Marketing Card Border Colors by Type */
+.marketing__card--digital {
+  border-color: var(--border-blue-light);
+}
+
+.marketing__card--digital:hover {
+  border-color: var(--border-blue-medium);
+  box-shadow: 0 8px 30px var(--shadow-blue-medium);
+}
+
+.marketing__card--partnership {
+  border-color: var(--border-green-medium);
+}
+
+.marketing__card--partnership:hover {
+  border-color: var(--border-green-medium);
+  box-shadow: 0 8px 30px var(--shadow-green-medium);
+}
+
+.marketing__card--local {
+  border-color: var(--border-purple-light);
+}
+
+.marketing__card--local:hover {
+  border-color: var(--border-purple-medium);
+  box-shadow: 0 8px 30px var(--shadow-purple-medium);
+}
+
+.marketing__card--promo {
+  border-color: var(--border-orange-light);
+}
+
+.marketing__card--promo:hover {
+  border-color: var(--border-orange-medium);
+  box-shadow: 0 8px 30px var(--shadow-orange-medium);
+}
+
 /* Digital Marketing - Blue Theme */
 .marketing__card--digital .marketing__header {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
@@ -2219,13 +2256,9 @@ main .hero {
     color: #3b82f6;
 }
 
-/* /* Partnership - Green Theme */
-.marketing__card--partnership {
-    border-color: var(--border-green-light);
-}
-
+/* Partnership - Green Theme */
 .marketing__card--partnership .marketing__header {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
 }
 
 .marketing__card--partnership .marketing__icon {
@@ -2245,10 +2278,7 @@ main .hero {
     color: var(--primary-green);
 }
 
-.marketing__card--partnership:hover {
-    border-color: var(--border-green-medium);
-    box-shadow: 0 8px 30px var(--shadow-green-medium);
-}
+
 
 /* Local Marketing - Purple Theme */
 .marketing__card--local .marketing__header {
