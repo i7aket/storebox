@@ -54,23 +54,26 @@
     /* Purple Colors (Founders) */
     --shadow-purple-medium: rgba(156, 39, 176, 0.15);
     --border-purple-medium: rgba(156, 39, 176, 0.3);
+    --border-purple-strong: rgba(156, 39, 176, 0.6);
     
     /* Blue Colors (2nd Round Investors) */
     --shadow-blue-medium: rgba(33, 150, 243, 0.15);
     --border-blue-medium: rgba(33, 150, 243, 0.3);
+    --border-blue-strong: rgba(33, 150, 243, 0.6);
     
     /* Orange Colors (3rd Round Investors) */
     --shadow-orange-medium: rgba(255, 152, 0, 0.15);
     --border-orange-medium: rgba(255, 152, 0, 0.3);
+    --border-orange-strong: rgba(255, 152, 0, 0.6);
     
     /* Red Colors (Loading Risk) */
     --shadow-red-medium: rgba(244, 67, 54, 0.15);
     --border-red-medium: rgba(244, 67, 54, 0.3);
     
     /* Light Border Colors for Normal State */
-    --border-purple-light: rgba(156, 39, 176, 0.15);
-    --border-blue-light: rgba(33, 150, 243, 0.15);
-    --border-orange-light: rgba(255, 152, 0, 0.15);
+    --border-purple-light: rgba(156, 39, 176, 0.2);
+    --border-blue-light: rgba(33, 150, 243, 0.2);
+    --border-orange-light: rgba(255, 152, 0, 0.2);
     --border-red-light: rgba(244, 67, 54, 0.15);
     
     /* Status Colors */
@@ -2243,7 +2246,7 @@ main .hero {
 
 .marketing__card:hover {
   transform: translateY(-8px);
-  border-color: var(--border-blue-medium);
+  border-color: var(--border-blue-strong);
   box-shadow: 0 8px 30px var(--shadow-blue-medium);
 }
 
@@ -2334,7 +2337,7 @@ main .hero {
 }
 
 .marketing__card--digital:hover {
-  border-color: var(--border-blue-medium);
+  border-color: var(--border-blue-strong);
   box-shadow: 0 8px 30px var(--shadow-blue-medium);
 }
 
@@ -2352,7 +2355,7 @@ main .hero {
 }
 
 .marketing__card--local:hover {
-  border-color: var(--border-purple-medium);
+  border-color: var(--border-purple-strong);
   box-shadow: 0 8px 30px var(--shadow-purple-medium);
 }
 
@@ -2361,7 +2364,7 @@ main .hero {
 }
 
 .marketing__card--promo:hover {
-  border-color: var(--border-orange-medium);
+  border-color: var(--border-orange-strong);
   box-shadow: 0 8px 30px var(--shadow-orange-medium);
 }
 
@@ -3241,17 +3244,17 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .risk__card--competition:hover {
-    border-color: var(--border-orange-medium);
+    border-color: var(--border-orange-strong);
     box-shadow: 0 8px 30px var(--shadow-orange-medium);
 }
 
 .risk__card--economic:hover {
-    border-color: var(--border-blue-medium);
+    border-color: var(--border-blue-strong);
     box-shadow: 0 8px 30px var(--shadow-blue-medium);
 }
 
 .risk__card--development:hover {
-    border-color: var(--border-purple-medium);
+    border-color: var(--border-purple-strong);
     box-shadow: 0 8px 30px var(--shadow-purple-medium);
 }
 
@@ -5923,17 +5926,17 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 
 .structure__card--founder:hover {
     box-shadow: 0 15px 40px var(--shadow-purple-medium);
-    border-color: var(--border-purple-medium);
+    border-color: var(--border-purple-strong);
 }
 
 .structure__card--first:hover {
     box-shadow: 0 15px 40px var(--shadow-blue-medium);
-    border-color: var(--border-blue-medium);
+    border-color: var(--border-blue-strong);
 }
 
 .structure__card--second:hover {
     box-shadow: 0 15px 40px var(--shadow-orange-medium);
-    border-color: var(--border-orange-medium);
+    border-color: var(--border-orange-strong);
 }
 
 .structure__card-pattern {
