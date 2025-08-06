@@ -238,8 +238,8 @@ main {
 }
 
 .card-scenario:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px var(--shadow-white);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
 /* Chart container variant */
@@ -260,6 +260,11 @@ main {
     justify-content: center;
     flex-grow: 1;
     min-height: 320px;
+}
+
+.card-chart-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
 /* Border top color modifiers for scenario cards */
