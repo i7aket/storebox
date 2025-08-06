@@ -231,6 +231,85 @@ nav .menu__list li {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px var(--shadow-green-dark);
 }
+/* Unified Slide Background System */
+.slide-bg {
+    background: var(--gradient-bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Base pseudo-element for all slide backgrounds */
+.slide-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* Individual radial gradient positions for each slide */
+.market-opportunity::before {
+    background: radial-gradient(circle at 20% 50%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.market-imbalance::before {
+    background: radial-gradient(circle at 85% 30%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.competition::before {
+    background: radial-gradient(circle at 15% 80%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.properties::before {
+    background: radial-gradient(circle at 70% 15%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.project-development-plan::before {
+    background: radial-gradient(circle at 40% 70%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.financial-model::before {
+    background: radial-gradient(circle at 90% 60%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.investment-details::before {
+    background: radial-gradient(circle at 25% 25%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.structure::before {
+    background: radial-gradient(circle at 80% 20%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.franchise::before {
+    background: radial-gradient(circle at 60% 85%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.technology::before {
+    background: radial-gradient(circle at 30% 40%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.marketing::before {
+    background: radial-gradient(circle at 75% 75%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.operational-efficiency::before {
+    background: radial-gradient(circle at 45% 20%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.risks::before {
+    background: radial-gradient(circle at 10% 65%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.timing::before {
+    background: radial-gradient(circle at 55% 45%, var(--bg-green-light) 0%, transparent 50%);
+}
+
+.success-stories::before {
+    background: radial-gradient(circle at 35% 90%, var(--bg-green-light) 0%, transparent 50%);
+}
+
 /* Hero Section */
 main .hero {
     padding: 120px 0 80px;
@@ -398,20 +477,8 @@ main .hero {
 /* Market Opportunity Section - Card Design Variant */
 .market-opportunity {
     padding: 100px 0;
-    background: var(--gradient-bg-dark);
-    position: relative;
-    overflow: hidden;
 }
-.market-opportunity::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, var(--bg-green-light) 0%, transparent 50%);
-    pointer-events: none;
-}
+
 .market__content {
     display: flex;
     gap: 60px;
@@ -720,7 +787,6 @@ main .hero {
 /* Market Imbalance Section */
 .market-imbalance {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 /* Market Comparison Structure */
 .market-comparison {
@@ -924,7 +990,6 @@ main .hero {
 /* Competition Section */
 .competition {
     padding: 100px 0;
-    background: var(--bg-darker);
 }
 .competition__subtitle{
     font-size: 1.2rem;
@@ -1221,7 +1286,6 @@ main .hero {
 /* Properties Section */
 .properties {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 .properties__grid {
     display: grid;
@@ -1470,7 +1534,6 @@ main .hero {
     /* Financial Model Section */
 .financial-model {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 .financial__overview {
     display: grid;
@@ -1871,7 +1934,6 @@ main .hero {
 /* Investment Details Section */
 .investment-details {
     padding: 100px 0;
-    background: var(--bg-darker);
 }
 .investment__overview {
     display: grid;
@@ -1926,7 +1988,6 @@ main .hero {
 /* Additional sections styling continues... */
 .franchise {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 .franchise__content {
     display: grid;
@@ -1980,7 +2041,6 @@ main .hero {
 }
 .technology {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 .technology__subtitle {
     font-size: 1.4rem;
@@ -2211,7 +2271,6 @@ main .hero {
 /* Marketing Section - Enhanced with Color Themes */
 .marketing {
     padding: 100px 0;
-    background: var(--bg-darker);
 }
 
 .marketing__grid {
@@ -2503,7 +2562,6 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 /* Operational Efficiency Section - Enhanced with Color Themes */
 .operational-efficiency {
     padding: 100px 0;
-    background: var(--bg-dark);
 }
 
 .efficiency__section-title {
@@ -2954,7 +3012,6 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 /* Risk Analysis Section - Enhanced with Color Themes */
 .risks {
     padding: 100px 0;
-    background: var(--bg-darker);
 }
 
 .risks__section-title {
@@ -3474,7 +3531,6 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 /* Timing Section */
 .timing {
     padding: 100px 0;
-    background: var(--bg-darker);
 }
 
 .timing__overview {
@@ -5716,21 +5772,9 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 /* Structure Section */
 .structure {
     padding: 60px 0;
-    background: var(--gradient-bg-dark);
-    position: relative;
-    overflow: hidden;
 }
 
-.structure::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 80% 20%, var(--bg-green-light) 0%, transparent 50%);
-    pointer-events: none;
-}
+
 
 .structure__content {
     display: grid;
@@ -6105,7 +6149,6 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
    Project Development Plan Section 
    ========================= */
 .project-development-plan {
-    background: var(--bg-dark);
     color: var(--text-primary);
     padding: 80px 0;
     position: relative;
