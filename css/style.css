@@ -591,6 +591,11 @@ main .hero {
     color: var(--text-primary);
     position: relative;
 }
+.section-title i {
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+    margin-right: 10px;
+}
+
 .section-title::after {
     content: '';
     position: absolute;
@@ -3120,7 +3125,6 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .risks__section-title i {
-    color: #4fc3f7;
     font-size: clamp(1.6rem, 4.5vw, 2rem);
 }
 
