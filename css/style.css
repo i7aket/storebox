@@ -277,7 +277,7 @@ main {
 }
 
 .card--top-blue {
-    border-top-color: #3b82f6;
+    border-top-color: #2196f3;
 }
 
 /* Header Styles */
@@ -1158,7 +1158,7 @@ main .hero {
     box-shadow: 0 10px 30px var(--shadow-white);
 }
 .competitor--shurgard {
-    border-top: 5px solid #1976d2;
+    border-top: 5px solid #2196f3;
     background: linear-gradient(135deg, rgba(33, 150, 243, 0.05) 0%, var(--bg-white) 100%);
 }
 .competitor--myplace {
@@ -1195,7 +1195,7 @@ main .hero {
     font-size: 0.9rem;
 }
 .competitor--shurgard .competitor__name {
-    color: #1976d2;
+    color: #2196f3;
 }
 .competitor--myplace .competitor__name {
     color: #8b5cf6;
@@ -1215,7 +1215,7 @@ main .hero {
 }
 .competitor--shurgard .competitor__segment {
     background-color: rgba(33, 150, 243, 0.1);
-    color: #1976d2;
+    color: #2196f3;
 }
 .competitor--myplace .competitor__segment {
     background-color: rgba(139, 92, 246, 0.1);
@@ -1916,7 +1916,7 @@ main .hero {
     border-top-color: var(--primary-green);
 }
 .scenario-card--target {
-    border-top-color: #3b82f6;
+    border-top-color: #2196f3;
 }
 .scenario-title {
     font-size: 1.1rem;
@@ -1930,7 +1930,7 @@ main .hero {
     color: var(--primary-green);
 }
 .scenario-card--target .scenario-title {
-    color: #3b82f6;
+    color: #2196f3;
 }
 .scenario-value {
     font-size: 2.2rem;
@@ -1945,7 +1945,7 @@ main .hero {
     color: var(--primary-green);
 }
 .scenario-card--target .scenario-value {
-    color: #3b82f6;
+    color: #2196f3;
 }
 .scenario-desc {
     font-size: 0.85rem;
@@ -2234,7 +2234,7 @@ main .hero {
 
 /* Client (Portal) - Blue Theme */
 .technology__box--client .technology__box-header {
-    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
 }
 
 .technology__box--client .technology__box-icon {
@@ -2242,7 +2242,7 @@ main .hero {
 }
 
 .technology__box--client .technology__highlight {
-    color: #1976d2;
+    color: #2196f3;
 }
 
 /* Management - Green Theme */
@@ -2509,7 +2509,7 @@ main .hero {
 
 /* Digital Marketing - Blue Theme */
 .marketing__card--digital .marketing__header {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
 }
 
 .marketing__card--digital .marketing__icon {
@@ -2517,15 +2517,15 @@ main .hero {
 }
 
 .marketing__card--digital .marketing__pattern {
-    color: #3b82f6;
+    color: #2196f3;
 }
 
 .marketing__card--digital .marketing__item-icon {
-    color: #3b82f6;
+    color: #2196f3;
 }
 
 .marketing__card--digital .marketing__highlight {
-    color: #3b82f6;
+    color: #2196f3;
 }
 
 /* Partnership - Green Theme */
@@ -2672,7 +2672,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .efficiency__section-title i {
-    color: #4fc3f7;
+    color: #2196f3;
     font-size: clamp(1.6rem, 4.5vw, 2rem);
 }
 
@@ -2766,7 +2766,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 
 /* Centralized Functions - Blue Theme */
 .efficiency__box--centralized .efficiency__box-header {
-    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
 }
 
 .efficiency__box--centralized .efficiency__box-icon {
@@ -2774,11 +2774,11 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .efficiency__box--centralized .efficiency__highlight {
-    color: #1976d2;
+    color: #2196f3;
 }
 
 .efficiency__box--centralized .efficiency__pattern {
-    color: #1976d2;
+    color: #2196f3;
 }
 
 .efficiency__functions-grid {
@@ -2810,7 +2810,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .efficiency__function-icon i {
-    color: #1976d2;
+    color: #2196f3;
     font-size: 1rem;
 }
 
@@ -5458,7 +5458,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .tech-feature--client .tech-feature__header--colored {
-    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
 }
 
 .tech-feature--management .tech-feature__header--colored {
@@ -5543,7 +5543,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 
 .tech-feature--client .tech-feature__item-icon {
     background: rgba(33, 150, 243, 0.1);
-    color: #1976d2;
+    color: #2196f3;
 }
 
 .tech-feature--management .tech-feature__item-icon {
@@ -5568,7 +5568,7 @@ background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green
 }
 
 .tech-feature--client .tech-feature__highlight {
-    color: #1976d2;
+    color: #2196f3;
 }
 
 .tech-feature--management .tech-feature__highlight {
