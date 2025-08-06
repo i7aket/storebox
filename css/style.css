@@ -443,7 +443,7 @@ main .hero {
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
-    background-image: url(../images/hero-img.jpg);
+    background-image: url(../images/hero-image.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
