@@ -646,7 +646,7 @@
         <div class="financial__overview">
           <div class="financial__two-column">
             <div class="financial__left-column">
-              <div class="financial__card">
+              <div class="card-base card-padded financial__card">
                 <div class="financial__card-title">
                   <i class="fas fa-ruler-combined"></i>
                   Базові параметри
@@ -671,7 +671,7 @@
                 </div>
               </div>
               
-              <div class="financial__card">
+              <div class="card-base card-padded financial__card">
                 <div class="financial__card-title">
                   <i class="fas fa-coins"></i>
                   Структура доходів
@@ -713,7 +713,7 @@
                 </div>
               </div>
               
-              <div class="financial__card">
+              <div class="card-base card-padded financial__card">
                 <div class="financial__card-title">
                   <i class="fas fa-chart-pie"></i>
                   Структура витрат
@@ -740,30 +740,30 @@
             </div>
             
             <div class="financial__right-column">
-              <div class="financial__card">
+              <div class="card-base card-padded financial__card">
                 <div class="financial__card-title">
                   <i class="fas fa-chart-bar"></i>
                   Фінансові сценарії
                 </div>
-                <div class="financial__chart-container">
+                <div class="card-base card-chart financial__chart-container">
                   <canvas id="financialChart"></canvas>
                 </div>
               </div>
               
               <div class="financial__scenarios-container">
-                <div class="scenario-card scenario-card--conservative">
+                <div class="card-base card-scenario card--top-red scenario-card scenario-card--conservative">
                   <div class="scenario-title">Беззбитковість</div>
                   <div class="scenario-value">50%</div>
                   <div class="scenario-desc">Точка брейківен<br>(50.8% завантаження)</div>
                 </div>
                 
-                <div class="scenario-card scenario-card--base">
+                <div class="card-base card-scenario card--top-green scenario-card scenario-card--base">
                   <div class="scenario-title">Базовий</div>
                   <div class="scenario-value">€56,981</div>
                   <div class="scenario-desc">Річний прибуток<br>(<span class="highlight">€8,455/міс</span> при 70% завантаження)</div>
                 </div>
                 
-                <div class="scenario-card scenario-card--target">
+                <div class="card-base card-scenario card--top-blue scenario-card scenario-card--target">
                   <div class="scenario-title">Плановий</div>
                   <div class="scenario-value">€101,460</div>
                   <div class="scenario-desc">Річний прибуток<br>(85% завантаження)</div>
@@ -820,13 +820,13 @@
               <div class="investment__total-amount">€150,000</div>
             </div>
             
-            <div class="investment__chart-container">
+            <div class="card-base card-chart-large investment__chart-container">
               <canvas id="investmentChart"></canvas>
             </div>
           </div>
           
           <div class="investment__right-column">
-            <div class="investment__box investment__box--conversion">
+            <div class="card-base card-padded card--green investment__box investment__box--conversion">
               <div class="investment__box-header">
                 <div class="investment__box-title">
                   <i class="fas fa-tools"></i>
@@ -918,7 +918,7 @@
               </div>
             </div>
             
-            <div class="investment__box investment__box--reserves">
+            <div class="card-base card-padded card--orange investment__box investment__box--reserves">
               <div class="investment__box-header">
                 <div class="investment__box-title">
                   <i class="fas fa-piggy-bank"></i>
@@ -1008,7 +1008,7 @@
             </div>
             
             <div class="structure__ceo-card">
-              <div class="structure__card structure__card--ceo">
+              <div class="card-base card-compact structure__card structure__card--ceo">
                 <div class="structure__card-pattern"></div>
   
                 <div class="structure__card-header">
@@ -1043,7 +1043,7 @@
           <div class="structure__right">
             <div class="structure__cards">
             
-            <div class="structure__card structure__card--founder">
+            <div class="card-base card-compact structure__card structure__card--founder">
               <div class="structure__card-pattern"></div>
 
               <div class="structure__card-header">
@@ -1074,7 +1074,7 @@
               </div>
             </div>
             
-            <div class="structure__card structure__card--first">
+            <div class="card-base card-compact structure__card structure__card--first">
               <div class="structure__card-pattern"></div>
               <div class="structure__card-header">
                 <div class="structure__card-icon">
@@ -1105,7 +1105,7 @@
               </div>
             </div>
             
-            <div class="structure__card structure__card--second">
+            <div class="card-base card-compact structure__card structure__card--second">
               <div class="structure__card-pattern"></div>
               <div class="structure__card-header">
                 <div class="structure__card-icon">
@@ -1146,7 +1146,7 @@
         <h2 class="section-title">Франчайзингова модель</h2>        
         <div class="risks__container">
           <!-- Card 1: Franchisee Parameters -->
-          <div class="risk__card risk__card--loading">
+          <div class="card-base card-bordered risk__card risk__card--loading">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1189,7 +1189,7 @@
           </div>
           
           <!-- Card 2: Benefits (moved from right column) -->
-          <div class="risk__card risk__card--competition">
+          <div class="card-base card-bordered risk__card risk__card--competition">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1234,7 +1234,7 @@
           </div>
           
           <!-- Card 3: Franchisor Revenue (moved from left column) -->
-          <div class="risk__card risk__card--economic">
+          <div class="card-base card-bordered risk__card risk__card--economic">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1267,7 +1267,7 @@
           </div>
           
           <!-- Card 4: Geography -->
-          <div class="risk__card risk__card--development">
+          <div class="card-base card-bordered risk__card risk__card--development">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1310,7 +1310,7 @@
       <div class="container">
         <h2 class="section-title">Технологічна платформа</h2>        
         <div class="technology__container">
-          <div class="technology__box technology__box--client">
+          <div class="card-base card-bordered technology__box technology__box--client">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-user"></i>
@@ -1357,7 +1357,7 @@
             </div>
           </div>
           
-          <div class="technology__box technology__box--management">
+          <div class="card-base card-bordered technology__box technology__box--management">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-building"></i>
@@ -1404,7 +1404,7 @@
             </div>
           </div>
           
-          <div class="technology__box technology__box--security">
+          <div class="card-base card-bordered technology__box technology__box--security">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-shield-alt"></i>
@@ -1470,7 +1470,7 @@
       <div class="container">
         <h2 class="section-title">Маркетингова стратегія</h2>
         <div class="marketing__grid">
-          <div class="marketing__card marketing__card--digital">
+          <div class="card-base card-bordered card--blue marketing__card marketing__card--digital">
             <div class="marketing__pattern"></div>
             <div class="marketing__header">
               <div class="marketing__icon">
@@ -1506,7 +1506,7 @@
             </div>
           </div>
           
-          <div class="marketing__card marketing__card--partnership">
+          <div class="card-base card-bordered card--blue marketing__card marketing__card--partnership">
             <div class="marketing__pattern"></div>
             <div class="marketing__header">
               <div class="marketing__icon">
@@ -1542,7 +1542,7 @@
             </div>
           </div>
           
-          <div class="marketing__card marketing__card--local">
+          <div class="card-base card-bordered card--blue marketing__card marketing__card--local">
             <div class="marketing__pattern"></div>
             <div class="marketing__header">
               <div class="marketing__icon">
@@ -1578,7 +1578,7 @@
             </div>
           </div>
           
-          <div class="marketing__card marketing__card--promo">
+          <div class="card-base card-bordered card--blue marketing__card marketing__card--promo">
             <div class="marketing__pattern"></div>
             <div class="marketing__header">
               <div class="marketing__icon">
@@ -1616,7 +1616,7 @@
         <h2 class="section-title">Операційна ефективність</h2>
         <div class="efficiency__container">
           <div class="efficiency__left-column">
-            <div class="efficiency__box efficiency__box--centralized">
+            <div class="card-base card-bordered efficiency__box efficiency__box--centralized">
               <div class="efficiency__pattern"></div>
               <div class="efficiency__box-header">
                 <div class="efficiency__box-icon">
@@ -1664,7 +1664,7 @@
               </div>
             </div>
             
-            <div class="efficiency__box efficiency__box--savings">
+            <div class="card-base card-bordered efficiency__box efficiency__box--savings">
               <div class="efficiency__pattern"></div>
               <div class="efficiency__box-header">
                 <div class="efficiency__box-icon">
@@ -1718,7 +1718,7 @@
           </div>
           
           <div class="efficiency__right-column">
-            <div class="efficiency__box efficiency__box--revenue">
+            <div class="card-base card-bordered efficiency__box efficiency__box--revenue">
               <div class="efficiency__pattern"></div>
               <div class="efficiency__box-header">
                 <div class="efficiency__box-icon">
@@ -1843,7 +1843,7 @@
         </div>
         
         <div class="risks__container">
-          <div class="risk__card risk__card--loading">
+          <div class="card-base card-bordered risk__card risk__card--loading">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1879,7 +1879,7 @@
             </div>
           </div>
           
-          <div class="risk__card risk__card--competition">
+          <div class="card-base card-bordered risk__card risk__card--competition">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1915,7 +1915,7 @@
             </div>
           </div>
           
-          <div class="risk__card risk__card--economic">
+          <div class="card-base card-bordered risk__card risk__card--economic">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -1951,7 +1951,7 @@
             </div>
           </div>
           
-          <div class="risk__card risk__card--development">
+          <div class="card-base card-bordered risk__card risk__card--development">
             <div class="risk__pattern"></div>
             <div class="risk__header">
               <div class="risk__icon">
@@ -2007,7 +2007,7 @@
         <h2 class="section-title">Чому саме зараз?</h2>
         <div class="timing__overview">          
           <div class="technology__container">
-          <div class="technology__box technology__box--management">
+          <div class="card-base card-bordered technology__box technology__box--management">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-chart-line"></i>
@@ -2045,7 +2045,7 @@
             </div>
           </div>
           
-          <div class="technology__box technology__box--client">
+          <div class="card-base card-bordered technology__box technology__box--client">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-briefcase"></i>
@@ -2083,7 +2083,7 @@
             </div>
           </div>
           
-          <div class="technology__box technology__box--security">
+          <div class="card-base card-bordered technology__box technology__box--security">
             <div class="technology__box-header">
               <div class="technology__box-icon">
                 <i class="fas fa-door-open"></i>
